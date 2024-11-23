@@ -24,7 +24,7 @@ model Product {
   description String
   status      ProductStatus
   price       Int
-  image       String[]
+  images      String[]
   category    Category
   isFeatured  Boolean       @default(false)
 
@@ -33,13 +33,13 @@ model Product {
 }
 
 enum ProductStatus {
-  draft
-  published
-  archived
+  Draft
+  Published
+  Archived
 }
 
 enum Category {
-  men
-  women
-  kids
+  Men
+  Women
+  Kids
 }

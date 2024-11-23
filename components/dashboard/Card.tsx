@@ -30,7 +30,7 @@ function DashboardCard({
   icon,
 }: DashboardCardProps) {
   return (
-    <Card className="relative sm:max-w-sm">
+    <Card className="relative w-full sm:max-w-sm">
       <CardHeader className="relative z-10 space-y-0">
         <CardTitle className="text-xl tracking-wider">{title}</CardTitle>
         <CardDescription className="font-mont text-xs font-bold">

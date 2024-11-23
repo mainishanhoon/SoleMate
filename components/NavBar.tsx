@@ -22,7 +22,7 @@ export default function NavBar() {
           )}
         >
           <label.icon size={25} strokeWidth={2.5} />
-          <p className="font-mont font-bold tracking-wider">{label.name}</p>
+          <p className="font-bold tracking-wider">{label.name}</p>
         </Link>
       ))}
     </>
