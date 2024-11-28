@@ -36,7 +36,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning={true}>
       <body
-        className={`${montserrat.variable} ${hubotSans.className} overflow-hidden`}
+        className={`${montserrat.variable} ${hubotSans.className}`}
         suppressHydrationWarning
       >
         <NextTopLoader color="hsl(var(--primary))" showSpinner={false} />

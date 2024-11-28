@@ -1,3 +1,5 @@
+import { columns } from '@/components/table/Columns';
+import { DataTable } from '@/components/table/DataTable';
 import { Button } from '@/components/ui/button';
 import {
   Card,
@@ -6,17 +8,8 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card';
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from '@/components/ui/table';
-import prisma from '@/utils/db';
+import prisma from '@/lib/db';
 import { ChevronLeft, CircleFadingPlus } from 'lucide-react';
-import Image from 'next/image';
 import Link from 'next/link';
 
 async function getData() {
@@ -56,43 +49,7 @@ export default async function ProductsPage() {
           </CardDescription>
         </CardHeader>
         <CardContent>
-          <Table>
-            <TableHeader>
-              <TableRow>
-                <TableHead>Image</TableHead>
-                <TableHead>Name</TableHead>
-                <TableHead>Status</TableHead>
-                <TableHead>Price</TableHead>
-                <TableHead>Date</TableHead>
-                <TableHead className="text-end">Actions</TableHead>
-              </TableRow>
-            </TableHeader>
-            <TableBody>
-              {data.map((item) => (
-                <TableRow key={item.id}>
-                  <TableCell>
-                    <Image
-                      alt={item.name}
-                      src={item.images[0]}
-                      height={100}
-                      width={100}
-                      className="size-16 rounded-md object-cover"
-                    />
-                  </TableCell>
-                  <TableCell>{item.name}</TableCell>
-                  <TableCell>{item.status}</TableCell>
-                  <TableCell>{item.price}</TableCell>
-                  <TableCell>
-                    {new Intl.DateTimeFormat('en-US').format(item.createdAt)}
-                  </TableCell>
-                  <TableCell className="text-end">
-                    {/* Add action buttons or links here */}
-                    <button>Edit</button>
-                  </TableCell>
-                </TableRow>
-              ))}
-            </TableBody>
-          </Table>
+          <DataTable data={data} columns={columns} />
         </CardContent>
       </Card>
     </section>

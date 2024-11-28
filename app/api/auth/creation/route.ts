@@ -1,5 +1,5 @@
-import prisma from '@/utils/db';
-import fetchUser from '@/utils/hooks';
+import prisma from '@/lib/db';
+import fetchUser from '@/lib/hooks';
 import { NextResponse } from 'next/server';
 
 export async function GET() {

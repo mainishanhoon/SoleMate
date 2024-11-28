@@ -1,6 +1,6 @@
 'use client';
 
-import { CreateProductAction } from '@/lib/actions';
+import { UpdateProductAction } from '@/lib/actions';
 import { UploadDropzone } from '@/lib/uploadthing';
 import { Button } from '@/components/ui/button';
 import {
@@ -34,10 +34,22 @@ import { SubmitButton } from '@/components/Buttons';
 import { toast } from 'sonner';
 import { Category, ProductStatus } from '@prisma/client';
 
-export default function ProductCreationForm() {
-  const [images, setImages] = useState<string[]>([]);
+interface UpdateProps {
+  data: {
+    id: string;
+    name: string;
+    description: string;
+    status: string;
+    price: number;
+    images: string[];
+    category: string;
+    isFeatured: boolean;
+  };
+}
 
-  const [lastResult, formAction] = useActionState(CreateProductAction, null);
+export default function ProductUpdationForm({ data }: UpdateProps) {
+  const [images, setImages] = useState<string[]>(data.images);
+  const [lastResult, formAction] = useActionState(UpdateProductAction, null);
   const [form, fields] = useForm({
     lastResult,
 
@@ -84,7 +96,7 @@ export default function ProductCreationForm() {
                     type="text"
                     key={fields.name.key}
                     name={fields.name.name}
-                    defaultValue={fields.name.initialValue}
+                    defaultValue={data.name}
                     className="w-full"
                     placeholder="Product Name"
                   />
@@ -99,7 +111,7 @@ export default function ProductCreationForm() {
                   <Textarea
                     key={fields.description.key}
                     name={fields.description.name}
-                    defaultValue={fields.description.initialValue}
+                    defaultValue={data.description}
                     placeholder="Write your description right here..."
                   />
                   <p className="-mt-2 ml-3 font-mont text-destructive">
@@ -113,7 +125,7 @@ export default function ProductCreationForm() {
                   <Input
                     key={fields.price.key}
                     name={fields.price.name}
-                    defaultValue={fields.price.initialValue}
+                    defaultValue={data.price}
                     type="number"
                     placeholder="$55"
                   />
@@ -127,7 +139,7 @@ export default function ProductCreationForm() {
                     <Switch
                       key={fields.isFeatured.key}
                       name={fields.isFeatured.name}
-                      defaultValue={fields.isFeatured.initialValue}
+                      checked={data.isFeatured}
                       className="ml-3"
                     />
                     <p className="-mt-2 ml-3 font-mont text-destructive">
@@ -140,10 +152,10 @@ export default function ProductCreationForm() {
                   <Select
                     key={fields.status.key}
                     name={fields.status.name}
-                    defaultValue={fields.status.initialValue}
+                    defaultValue={data.status}
                   >
                     <SelectTrigger>
-                      <SelectValue placeholder="Select Status" />
+                      <SelectValue placeholder={data.status} />
                     </SelectTrigger>
                     <SelectContent>
                       {Object.values(ProductStatus).map((status) => (
@@ -166,10 +178,10 @@ export default function ProductCreationForm() {
                   <Select
                     key={fields.category.key}
                     name={fields.category.name}
-                    defaultValue={fields.category.initialValue}
+                    defaultValue={data.category}
                   >
                     <SelectTrigger>
-                      <SelectValue placeholder="Select Category" />
+                      <SelectValue placeholder={data.category} />
                     </SelectTrigger>
                     <SelectContent>
                       {Object.values(Category).map((category) => (
@@ -196,7 +208,7 @@ export default function ProductCreationForm() {
                   value={images}
                   key={fields.images.key}
                   name={fields.images.name}
-                  defaultValue={fields.images.initialValue as any}
+                  defaultValue={data.images as any}
                 />
                 {images.length > 0 ? (
                   <div className="mx-auto flex flex-wrap justify-center gap-5 rounded-lg bg-background p-5">
