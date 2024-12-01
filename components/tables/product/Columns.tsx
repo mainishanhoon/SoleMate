@@ -5,31 +5,44 @@ import { Product } from '@/lib/schema';
 import { DataTableColumnHeader } from './ColumnHeader';
 import { DataTableRowActions } from './RowActions';
 import Image from 'next/image';
-import { Switch } from '../ui/switch';
+import { Switch } from '@/components/ui/switch';
 
 export const columns: ColumnDef<Product>[] = [
   {
+    accessorKey: 'id',
+    header: ({ column }) => (
+      <DataTableColumnHeader
+        className="hidden size-0 p-0"
+        column={column}
+        title="ID"
+      />
+    ),
+    cell: ({ row }) => {
+      return <span className="hidden size-0 p-0">{row.getValue('id')}</span>;
+    },
+  },
+  {
     accessorKey: 'images',
     header: ({ column }) => (
-      <DataTableColumnHeader className="w-full" column={column} title="Image" />
+      <DataTableColumnHeader
+        className="-ml-8 w-full"
+        column={column}
+        title="Image"
+      />
     ),
     cell: ({ row }) => {
       const images = row.getValue('images') as string[];
       const imageUrl = images?.[0];
 
-      return imageUrl ? (
-        <div className="flex w-full justify-center">
-          <Image
-            alt="Product Image"
-            src={imageUrl}
-            height={100}
-            width={100}
-            className="size-16 rounded-md object-cover"
-          />
-        </div>
-      ) : (
-        <div>No Image</div>
-      );
+      <div className="-ml-2 w-full">
+        <Image
+          alt="Product Image"
+          src={imageUrl}
+          height={100}
+          width={100}
+          className="size-20 rounded-md object-cover"
+        />
+      </div>;
     },
     enableSorting: false,
     enableHiding: false,
@@ -37,12 +50,16 @@ export const columns: ColumnDef<Product>[] = [
   {
     accessorKey: 'name',
     header: ({ column }) => (
-      <DataTableColumnHeader className="w-full" column={column} title="Name" />
+      <DataTableColumnHeader
+        className="flex w-full justify-start"
+        column={column}
+        title="Name"
+      />
     ),
     cell: ({ row }) => {
       return (
-        <div className="flex w-full justify-center">
-          <span className="max-w-md truncate capitalize">
+        <div className="-ml-1">
+          <span className="w-full truncate font-bold capitalize tracking-widest">
             {row.getValue('name')}
           </span>
         </div>
@@ -60,8 +77,10 @@ export const columns: ColumnDef<Product>[] = [
     ),
     cell: ({ row }) => {
       return (
-        <div className="flex w-full justify-center">
-          <span className="w-24 capitalize"> {row.getValue('category')}</span>
+        <div className="flex justify-center">
+          <span className="-ml-2 w-24 font-bold capitalize tracking-widest">
+            {row.getValue('category')}
+          </span>
         </div>
       );
     },
@@ -73,15 +92,17 @@ export const columns: ColumnDef<Product>[] = [
     accessorKey: 'status',
     header: ({ column }) => (
       <DataTableColumnHeader
-        className="w-full"
+        className="-ml-1 w-full"
         column={column}
         title="Status"
       />
     ),
     cell: ({ row }) => {
       return (
-        <div className="flex w-full justify-center">
-          <span className="w-24 capitalize"> {row.getValue('status')}</span>
+        <div className="flex justify-center">
+          <span className="-mr-2 w-24 font-bold capitalize tracking-widest">
+            {row.getValue('status')}
+          </span>
         </div>
       );
     },
@@ -92,13 +113,19 @@ export const columns: ColumnDef<Product>[] = [
   {
     accessorKey: 'price',
     header: ({ column }) => (
-      <DataTableColumnHeader className="w-full" column={column} title="Price" />
+      <DataTableColumnHeader
+        className="-ml-4 w-full"
+        column={column}
+        title="Price"
+      />
     ),
     cell: ({ row }) => {
       return (
-        <div className="flex w-full justify-center">
+        <div className="flex justify-center">
           ₹
-          <span className="-mr-8 w-24 capitalize">{row.getValue('price')}</span>
+          <span className="w-24 font-bold capitalize tracking-widest">
+            {row.getValue('price')}
+          </span>
         </div>
       );
     },
@@ -110,17 +137,17 @@ export const columns: ColumnDef<Product>[] = [
     accessorKey: 'isFeatured',
     header: ({ column }) => (
       <DataTableColumnHeader
-        className="w-full text-lg"
+        className="w-full"
         column={column}
         title="Featured"
       />
     ),
     cell: ({ row }) => {
       return (
-        <div className="flex w-full justify-center">
+        <div className="flex justify-center">
           <Switch
             checked={row.getValue('isFeatured')}
-            className="-ml-6 focus:ring-2 focus:ring-offset-2"
+            className="-ml-8 focus:ring-2 focus:ring-offset-2"
           />
         </div>
       );
@@ -146,8 +173,10 @@ export const columns: ColumnDef<Product>[] = [
         year: 'numeric',
       });
       return (
-        <div className="flex w-full justify-center">
-          <span className="w-28 capitalize">{formattedDate}</span>
+        <div className="flex justify-center">
+          <span className="w-28 font-bold capitalize tracking-widest">
+            {formattedDate}
+          </span>
         </div>
       );
     },

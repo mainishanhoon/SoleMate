@@ -1,6 +1,11 @@
-import { CalendarCog, CalendarRange, Cog, UsersRound } from 'lucide-react';
+import {
+  CalendarCog,
+  CalendarRange,
+  GalleryThumbnails,
+  UsersRound,
+} from 'lucide-react';
 
-export const NavigationLinks = [
+export const AdminNavigationLinks = [
   {
     name: 'Dashboard',
     href: '/dashboard',
@@ -17,8 +22,27 @@ export const NavigationLinks = [
     icon: CalendarRange,
   },
   {
-    name: 'Categories',
-    href: '/dashboard/categories',
-    icon: Cog,
+    name: 'Banner',
+    href: '/dashboard/banner',
+    icon: GalleryThumbnails,
+  },
+];
+
+export const UserNavigationLinks = [
+  {
+    name: 'Home',
+    href: '/home',
+  },
+  {
+    name: 'All Products',
+    href: '/products',
+  },
+  {
+    name: 'Men',
+    href: '/men',
+  },
+  {
+    name: 'Women',
+    href: '/women',
   },
 ];

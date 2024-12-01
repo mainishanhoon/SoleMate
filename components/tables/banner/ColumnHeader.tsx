@@ -8,8 +8,7 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
-import { ArrowDown, ArrowUp, EyeClosed } from 'lucide-react';
-import { CaretSortIcon } from '@radix-ui/react-icons';
+import { ArrowDown, ArrowUp, ChevronsUpDown, EyeClosed } from 'lucide-react';
 
 interface DataTableColumnHeaderProps<TData, TValue>
   extends React.HTMLAttributes<HTMLDivElement> {
@@ -24,16 +23,19 @@ export function DataTableColumnHeader<TData, TValue>({
 }: DataTableColumnHeaderProps<TData, TValue>) {
   if (!column.getCanSort()) {
     return (
-      <div className={cn('p-2 text-center text-lg font-bold', className)}>
+      <div
+        className={cn(
+          'p-2 text-center text-lg font-bold tracking-wider',
+          className,
+        )}
+      >
         {title}
       </div>
     );
   }
 
   return (
-    <div
-      className={cn('space-x-2 text-center text-lg tracking-wider', className)}
-    >
+    <div className={cn('space-x-2 text-center tracking-wider', className)}>
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
           <Button
@@ -43,11 +45,11 @@ export function DataTableColumnHeader<TData, TValue>({
           >
             <span className="font-bold">{title}</span>
             {column.getIsSorted() === 'desc' ? (
-              <ArrowDown className="ml-2 h-4 w-4" />
+              <ArrowDown strokeWidth={3} className="ml-2 h-4 w-4" />
             ) : column.getIsSorted() === 'asc' ? (
-              <ArrowUp className="ml-2 h-4 w-4" />
+              <ArrowUp strokeWidth={3} className="ml-2 h-4 w-4" />
             ) : (
-              <CaretSortIcon className="ml-2 h-4 w-4" />
+              <ChevronsUpDown strokeWidth={3} className="ml-2 h-4 w-4" />
             )}
           </Button>
         </DropdownMenuTrigger>

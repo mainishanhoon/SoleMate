@@ -1,10 +1,7 @@
 'use client';
 
-import { RefreshCcw } from 'lucide-react';
 import { Table } from '@tanstack/react-table';
-import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import { category, status } from '@/constants/sort';
 import { DataTableFacetedFilter } from './FacetedFilter';
 import { CalendarDatePicker } from '@/components/CalendarDatePicker';
 import { useState } from 'react';
@@ -35,36 +32,12 @@ export function DataTableToolbar<TData>({
       <div className="flex flex-1 flex-wrap items-center gap-2">
         <Input
           placeholder="Name..."
-          value={(table.getColumn('name')?.getFilterValue() as string) ?? ''}
+          value={(table.getColumn('title')?.getFilterValue() as string) ?? ''}
           onChange={(event) => {
-            table.getColumn('name')?.setFilterValue(event.target.value);
+            table.getColumn('title')?.setFilterValue(event.target.value);
           }}
           className="h-8 w-[150px] lg:w-[250px]"
         />
-        {table.getColumn('status') && (
-          <DataTableFacetedFilter
-            column={table.getColumn('status')}
-            title="Status"
-            options={status}
-          />
-        )}
-        {table.getColumn('category') && (
-          <DataTableFacetedFilter
-            column={table.getColumn('category')}
-            title="Categories"
-            options={category}
-          />
-        )}
-        {isFiltered && (
-          <Button
-            variant="outline"
-            onClick={() => table.resetColumnFilters()}
-            className="h-8 border-input px-2 lg:px-3 bg-background"
-          >
-            Reset
-            <RefreshCcw strokeWidth={2.5} className="ml-2 size-4" />
-          </Button>
-        )}
         <CalendarDatePicker
           date={dateRange}
           onDateSelect={handleDateSelect}

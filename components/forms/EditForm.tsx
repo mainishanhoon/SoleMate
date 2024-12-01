@@ -30,7 +30,7 @@ import { parseWithZod } from '@conform-to/zod';
 import { ProductSchema } from '@/lib/schema';
 import { useActionState, useState } from 'react';
 import Image from 'next/image';
-import { SubmitButton } from '@/components/Buttons';
+import { SubmitButton } from '@/components/SubmitButton';
 import { toast } from 'sonner';
 import { Category, ProductStatus } from '@prisma/client';
 
@@ -65,7 +65,7 @@ export default function ProductUpdationForm({ data }: UpdateProps) {
     setImages(images.filter((_, i) => i !== index));
     toast.info('Image has been Deleted');
   };
-
+  console.log({ data });
   return (
     <>
       <Form id={form.id} onSubmit={form.onSubmit} action={formAction}>
@@ -75,22 +75,22 @@ export default function ProductUpdationForm({ data }: UpdateProps) {
               <ChevronLeft size={25} strokeWidth={3} />
             </Link>
           </Button>
-          <h1 className="text-2xl font-bold tracking-wider">New Product</h1>
+          <h1 className="text-2xl font-bold tracking-wider">Edit Product</h1>
         </div>
-
         <Card className="mt-5">
           <CardHeader>
             <CardTitle className="text-xl tracking-wider">
               Product Details
             </CardTitle>
             <CardDescription className="font-bold tracking-wider">
-              In this form you can create your product
+              In this form you can update your product
             </CardDescription>
           </CardHeader>
           <CardContent>
             <div className="flex flex-col gap-6">
               <div className="grid gap-5 sm:grid-cols-2">
                 <div className="flex flex-col gap-3">
+                  <Input type="hidden" name="productId" value={data.id} />
                   <Label>Name</Label>
                   <Input
                     type="text"
@@ -100,7 +100,6 @@ export default function ProductUpdationForm({ data }: UpdateProps) {
                     className="w-full"
                     placeholder="Product Name"
                   />
-
                   <p className="-mt-2 ml-3 font-mont text-destructive">
                     {fields.name.errors}
                   </p>
@@ -119,6 +118,7 @@ export default function ProductUpdationForm({ data }: UpdateProps) {
                   </p>
                 </div>
               </div>
+
               <div className="grid gap-5 sm:grid-cols-2">
                 <div className="flex flex-col gap-3">
                   <Label>Price</Label>
@@ -205,7 +205,6 @@ export default function ProductUpdationForm({ data }: UpdateProps) {
                 <Label>Images</Label>
                 <input
                   type="hidden"
-                  value={images}
                   key={fields.images.key}
                   name={fields.images.name}
                   defaultValue={data.images as any}
@@ -260,7 +259,7 @@ export default function ProductUpdationForm({ data }: UpdateProps) {
             </div>
           </CardContent>
           <CardFooter className="flex justify-center">
-            <SubmitButton text="Create Product" />
+            <SubmitButton text="Save Changes" />
           </CardFooter>
         </Card>
       </Form>

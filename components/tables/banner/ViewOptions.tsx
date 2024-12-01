@@ -26,7 +26,7 @@ export function DataTableViewOptions<TData>({
         <Button
           variant="outline"
           size="sm"
-          className="ml-auto hidden h-8 border-2 border-dashed lg:flex"
+          className="ml-auto hidden hover:bg-muted-foreground/20 h-8 border-2 border-dashed lg:flex"
         >
           <View strokeWidth={2.5} className="mr-2 size-4" />
           <span className="font-bold">View</span>
@@ -39,7 +39,9 @@ export function DataTableViewOptions<TData>({
           .getAllColumns()
           .filter(
             (column) =>
-              typeof column.accessorFn !== 'undefined' && column.getCanHide(),
+              column.id !== 'id' && // Exclude the `id` column
+              typeof column.accessorFn !== 'undefined' &&
+              column.getCanHide(),
           )
           .map((column) => {
             return (

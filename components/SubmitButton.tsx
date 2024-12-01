@@ -4,6 +4,7 @@ import { useFormStatus } from 'react-dom';
 import { Button } from '@/components/ui/button';
 import { Loader } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import { toast } from 'sonner';
 
 interface ButtonProps {
   text: string;
@@ -18,10 +19,24 @@ interface ButtonProps {
     | null
     | undefined;
   className?: string;
+  toastMessage?: string;
 }
 
-export function SubmitButton({ text, variant, className }: ButtonProps) {
+export function SubmitButton({
+  text,
+  variant,
+  className,
+  toastMessage,
+}: ButtonProps) {
   const { pending } = useFormStatus();
+
+  const handleClick = () => {
+    setTimeout(() => {
+      if (toastMessage) {
+        toast.info(toastMessage);
+      }
+    }, 2000);
+  };
 
   return (
     <>
@@ -35,6 +50,7 @@ export function SubmitButton({ text, variant, className }: ButtonProps) {
           type="submit"
           variant={variant}
           className={cn('w-fit tracking-widest', className)}
+          onClick={handleClick}
         >
           {text}
         </Button>

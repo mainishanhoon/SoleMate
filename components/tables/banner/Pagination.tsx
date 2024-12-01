@@ -1,9 +1,3 @@
-import {
-  ChevronLeftIcon,
-  ChevronRightIcon,
-  DoubleArrowLeftIcon,
-  DoubleArrowRightIcon,
-} from '@radix-ui/react-icons';
 import { Table } from '@tanstack/react-table';
 import { Button } from '@/components/ui/button';
 import {
@@ -13,6 +7,12 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@/components/ui/select';
+import {
+  ChevronLeft,
+  ChevronRight,
+  ChevronsLeft,
+  ChevronsRight,
+} from 'lucide-react';
 
 interface DataTablePaginationProps<TData> {
   table: Table<TData>;
@@ -25,7 +25,7 @@ export function DataTablePagination<TData>({
     <div className="flex items-center justify-between px-2">
       <div className="flex w-full items-center justify-between space-x-6 lg:space-x-8">
         <div className="flex items-center space-x-2">
-          <p className="text-sm font-medium">Rows per page</p>
+          <p className="text-md font-bold tracking-wider">Rows per page</p>
           <Select
             value={`${table.getState().pagination.pageSize}`}
             onValueChange={(value) => {
@@ -35,7 +35,7 @@ export function DataTablePagination<TData>({
             <SelectTrigger className="h-8 w-[70px] bg-background hover:bg-muted-foreground/20">
               <SelectValue placeholder={table.getState().pagination.pageSize} />
             </SelectTrigger>
-            <SelectContent side="top">
+            <SelectContent side="top" className="font-bold tracking-widest">
               {[10, 20, 30, 40, 50].map((pageSize) => (
                 <SelectItem key={pageSize} value={`${pageSize}`}>
                   {pageSize}
@@ -45,7 +45,7 @@ export function DataTablePagination<TData>({
           </Select>
         </div>
         <div className="flex items-center space-x-2">
-          <div className="flex w-[100px] items-center justify-center text-sm font-medium">
+          <div className="text-md flex w-[100px] items-center justify-center font-bold tracking-wider">
             Page {table.getState().pagination.pageIndex + 1} of{' '}
             {table.getPageCount()}
           </div>
@@ -57,7 +57,7 @@ export function DataTablePagination<TData>({
               disabled={!table.getCanPreviousPage()}
             >
               <span className="sr-only">Go to first page</span>
-              <DoubleArrowLeftIcon className="h-4 w-4" />
+              <ChevronsLeft strokeWidth={3} size={20} />
             </Button>
             <Button
               variant="outline"
@@ -66,7 +66,7 @@ export function DataTablePagination<TData>({
               disabled={!table.getCanPreviousPage()}
             >
               <span className="sr-only">Go to previous page</span>
-              <ChevronLeftIcon className="h-4 w-4" />
+              <ChevronLeft strokeWidth={3} size={20} />
             </Button>
             <Button
               variant="outline"
@@ -75,7 +75,7 @@ export function DataTablePagination<TData>({
               disabled={!table.getCanNextPage()}
             >
               <span className="sr-only">Go to next page</span>
-              <ChevronRightIcon className="h-4 w-4" />
+              <ChevronRight strokeWidth={3} size={20} />
             </Button>
             <Button
               variant="outline"
@@ -84,7 +84,7 @@ export function DataTablePagination<TData>({
               disabled={!table.getCanNextPage()}
             >
               <span className="sr-only">Go to last page</span>
-              <DoubleArrowRightIcon className="h-4 w-4" />
+              <ChevronsRight strokeWidth={3} size={20} />
             </Button>
           </div>
         </div>

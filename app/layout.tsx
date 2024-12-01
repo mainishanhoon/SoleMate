@@ -1,6 +1,6 @@
-import type { Metadata } from 'next';
 import localFont from 'next/font/local';
 import './globals.css';
+import type { Metadata } from 'next';
 import NextTopLoader from 'nextjs-toploader';
 import { ThemeProvider } from '@/components/Providers';
 import { Toaster } from '@/components/ui/sonner';

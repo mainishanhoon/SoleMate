@@ -1,5 +1,4 @@
-import { columns } from '@/components/tables/product/Columns';
-import { DataTable } from '@/components/tables/product/DataTable';
+import prisma from '@/lib/db';
 import { Button } from '@/components/ui/button';
 import {
   Card,
@@ -8,23 +7,28 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card';
-import prisma from '@/lib/db';
-import { ChevronLeft, CircleFadingPlus } from 'lucide-react';
-import Link from 'next/link';
 
-async function getData() {
-  const data = await prisma.product.findMany({
-    orderBy: { createdAt: 'desc' },
+import { ChevronLeft, CircleFadingPlus, PlusCircle } from 'lucide-react';
+import Link from 'next/link';
+import { unstable_noStore as noStore } from 'next/cache';
+import { columns } from '@/components/tables/banner/Columns';
+import { DataTable } from '@/components/tables/banner/DataTable';
+
+async function fetchData() {
+  const data = await prisma.banner.findMany({
+    orderBy: {
+      createdAt: 'desc',
+    },
   });
 
   return data;
 }
 
-export default async function ProductsPage() {
-  const data = await getData();
-
+export default async function BannerRoute() {
+  noStore();
+  const data = await fetchData();
   return (
-    <section className="flex flex-col gap-4">
+    <section>
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-4">
           <Button variant="outline" size="icon" asChild>
@@ -32,22 +36,23 @@ export default async function ProductsPage() {
               <ChevronLeft size={25} strokeWidth={3} />
             </Link>
           </Button>
-          <h1 className="text-2xl font-bold tracking-wider">Products</h1>
+          <h1 className="text-2xl font-bold tracking-wider">Banner</h1>
         </div>
         <Button asChild className="flex items-center gap-x-2">
-          <Link href="/dashboard/products/create">
+          <Link href="/dashboard/banner/create">
             <CircleFadingPlus size={20} strokeWidth={3} />
-            <span>Add Product</span>
+            <span>Add Banner</span>
           </Link>
         </Button>
       </div>
-      <Card>
+
+      <Card className="mt-5">
         <CardHeader>
           <CardTitle className="text-xl tracking-wider">
-            Product Details
+            Banner Details
           </CardTitle>
           <CardDescription className="font-bold tracking-wider">
-            Manage your products and view their sales performance.
+            Efficiently organize, view, and manage your banners.{' '}
           </CardDescription>
         </CardHeader>
         <CardContent>

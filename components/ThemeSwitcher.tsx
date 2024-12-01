@@ -18,7 +18,7 @@ export default function ThemeToggle() {
       variant="outline"
       size="icon"
       onClick={toggleTheme}
-      className="group relative h-10 w-10 overflow-hidden rounded-full"
+      className="group relative overflow-hidden rounded-full"
     >
       {/* Light mode: Sun icon, replaced by Sunset on hover */}
       <Sun className="absolute inset-0 m-auto h-5 w-5 transition-all duration-300 group-hover:scale-0 group-hover:opacity-0 dark:scale-0 dark:opacity-0" />

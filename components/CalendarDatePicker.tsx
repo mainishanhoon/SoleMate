@@ -405,6 +405,7 @@ export const CalendarDatePicker = React.forwardRef<
         <Popover open={isPopoverOpen} onOpenChange={setIsPopoverOpen}>
           <PopoverTrigger asChild>
             <Button
+              variant="gooeyRight"
               id="date"
               ref={ref}
               {...props}

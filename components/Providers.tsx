@@ -12,6 +12,6 @@ export function ThemeProvider({
   return <NextThemesProvider {...props}>{children}</NextThemesProvider>;
 }
 
-export function AuthProvider({ children }: {children:ReactNode}) {
+export function AuthProvider({ children }: { children: ReactNode }) {
   return <KindeProvider>{children}</KindeProvider>;
 }
