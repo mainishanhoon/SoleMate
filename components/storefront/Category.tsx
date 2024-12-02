@@ -1,5 +1,3 @@
-'use client';
-
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '../ui/button';
@@ -9,7 +7,6 @@ import {
   CircleChevronRight,
   MoveRight,
 } from 'lucide-react';
-import { useState } from 'react';
 
 interface CategoryCards {
   imageSrc: string;
@@ -50,19 +47,19 @@ export default function Categories() {
       </div>
 
       <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-5 lg:gap-8">
-        <CatergoryCard
+        <CategoryCard
           imageSrc="/all.webp"
           link="/products/all"
           text="All Products"
         />
-        <CatergoryCard imageSrc="/kids.webp" link="/products/all" text="Kids" />
-        <CatergoryCard imageSrc="/men.webp" link="/products/all" text="Men" />
-        <CatergoryCard
+        <CategoryCard imageSrc="/kids.webp" link="/products/all" text="Kids" />
+        <CategoryCard imageSrc="/men.webp" link="/products/all" text="Men" />
+        <CategoryCard
           imageSrc="/women.webp"
           link="/products/all"
           text="Women"
         />
-        <CatergoryCard
+        <CategoryCard
           imageSrc="/elder.webp"
           link="/products/all"
           text="Elders"
@@ -72,16 +69,12 @@ export default function Categories() {
   );
 }
 
-export function CatergoryCard({ imageSrc, link, text }: CategoryCards) {
-  const [hovered, setHovered] = useState(false);
+export function CategoryCard({ imageSrc, link, text }: CategoryCards) {
   return (
-    <section
-      onMouseEnter={() => setHovered(true)}
-      onMouseLeave={() => setHovered(false)}
-      className="group relative justify-center"
-    >
+    <section className="group relative justify-center">
       <Link href={link}>
         <div className="relative">
+          {/* Image */}
           <Image
             src={imageSrc}
             loading="lazy"
@@ -90,7 +83,11 @@ export function CatergoryCard({ imageSrc, link, text }: CategoryCards) {
             height={1000}
             className="h-[400px] rounded-xl object-cover object-center sm:w-full"
           />
+
+          {/* Overlay */}
           <div className="absolute inset-0 rounded-xl bg-gradient-to-b from-transparent to-black opacity-80 transition-opacity duration-300 group-hover:opacity-60" />
+
+          {/* Text */}
           <div className="absolute inset-0 flex items-end p-6">
             <p className="flex flex-col">
               <span className="font-semibold tracking-widest text-white">
@@ -100,24 +97,21 @@ export function CatergoryCard({ imageSrc, link, text }: CategoryCards) {
                 Shop Now
               </span>
             </p>
-            <div
-              className={`absolute bottom-5 right-5 flex size-12 items-center justify-center rounded-full bg-white shadow-lg transition-transform duration-300 ${
-                hovered ? 'translate-x-2' : 'translate-x-0'
-              }`}
-            >
-              {hovered ? (
-                <ChevronsRight
-                  size={30}
-                  color="hsl(var(--primary))"
-                  strokeWidth={2.5}
-                />
-              ) : (
-                <CircleChevronRight
-                  size={30}
-                  color="hsl(var(--primary))"
-                  strokeWidth={2.5}
-                />
-              )}
+
+            {/* Hover Indicator */}
+            <div className="absolute bottom-5 right-5 flex size-12 transform items-center justify-center rounded-full bg-white shadow-lg transition-transform duration-300 group-hover:translate-x-2">
+              <ChevronsRight
+                size={30}
+                color="hsl(var(--primary))"
+                strokeWidth={2.5}
+                className="hidden group-hover:block"
+              />
+              <CircleChevronRight
+                size={30}
+                color="hsl(var(--primary))"
+                strokeWidth={2.5}
+                className="block group-hover:hidden"
+              />
             </div>
           </div>
         </div>

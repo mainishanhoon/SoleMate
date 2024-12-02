@@ -21,7 +21,7 @@ import {
 } from '@/components/ui/dialog';
 import Form from 'next/form';
 import { Input } from '@/components/ui/input';
-import { SubmitButton } from '@/components/SubmitButton';
+import { SubmitButton } from '@/components/SubmitButtons';
 import { DeleteBanner } from '@/lib/actions';
 
 interface DataTableRowActionsProps<TData> {

@@ -1,7 +1,7 @@
 'use client';
 
 import { CreateBanner } from '@/lib/actions';
-import { SubmitButton } from '@/components/SubmitButton';
+import { SubmitButton } from '@/components/SubmitButtons';
 import { UploadDropzone } from '@/lib/uploadthing';
 import { BannerSchema } from '@/lib/schema';
 import { Button } from '@/components/ui/button';
@@ -78,12 +78,12 @@ export default function BannerCreation() {
             </div>
             <div className="flex flex-col items-center gap-3">
               <Label>Images</Label>
-              <input
+              <Input
                 type="hidden"
-                value={image}
+                value={image ?? ''}
                 key={fields.imageString.key}
                 name={fields.imageString.name}
-                defaultValue={fields.imageString.initialValue as any}
+                defaultValue={fields.imageString.initialValue as string}
               />
               {image !== undefined ? (
                 <div className="mx-auto flex flex-wrap justify-center gap-5 rounded-lg bg-background p-5">
@@ -93,6 +93,7 @@ export default function BannerCreation() {
                       alt="Product Image"
                       width={800}
                       height={800}
+                      loading="lazy"
                       className="aspect-video rounded-lg border-2 border-muted-foreground bg-muted object-cover"
                     />
                   </div>

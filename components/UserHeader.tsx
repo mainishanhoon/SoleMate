@@ -1,5 +1,3 @@
-'use client';
-
 import Link from 'next/link';
 import {
   Sheet,
@@ -7,15 +5,15 @@ import {
   SheetTitle,
   SheetTrigger,
 } from '@/components/ui/sheet';
-import { Volleyball } from 'lucide-react';
+import { CircleUserRound, Volleyball } from 'lucide-react';
 import ThemeToggle from '@/components/ThemeSwitcher';
-import { AdminNavBar, UserNavBar } from '@/components/NavBar';
-import { usePathname } from 'next/navigation';
+import { UserNavBar } from '@/components/NavBar';
 import Bag from '@/components/Bag';
+import { UserDropdown } from '@/components/UserDropDown';
+import fetchUser from '@/lib/hooks';
 
-export default function Header() {
-  const pathname = usePathname();
-  const isDashboardRoute = pathname.startsWith('/dashboard');
+export default async function UserHeader() {
+  const user = await fetchUser();
 
   return (
     <header className="sticky top-0 z-50 w-full border-b-2 bg-background px-2 py-1 sm:px-4">
@@ -64,19 +62,33 @@ export default function Header() {
                 </Link>
               </SheetTitle>
               <nav className="mt-2 grid gap-2">
-                {isDashboardRoute ? <AdminNavBar /> : <UserNavBar />}
+                <UserNavBar />
               </nav>
             </SheetContent>
           </Sheet>
         </div>
 
         <nav className="flex max-md:hidden">
-          {isDashboardRoute ? <AdminNavBar /> : <UserNavBar />}
+          <UserNavBar />
         </nav>
 
         <div className="flex items-center space-x-2 sm:space-x-5">
           <Bag />
           <ThemeToggle />
+          {user ? (
+            <UserDropdown
+              email={user.email as string}
+              name={user.given_name as string}
+              pfp={
+                user.picture ?? `https://avatar.vercel.sh/${user.given_name}`
+              }
+            />
+          ) : (
+            <CircleUserRound
+              size={35}
+              className="rounded-full bg-primary p-1 text-white"
+            />
+          )}
         </div>
       </div>
     </header>

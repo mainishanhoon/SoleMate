@@ -30,7 +30,7 @@ import { parseWithZod } from '@conform-to/zod';
 import { ProductSchema } from '@/lib/schema';
 import { useActionState, useState } from 'react';
 import Image from 'next/image';
-import { SubmitButton } from '@/components/SubmitButton';
+import { SubmitButton } from '@/components/SubmitButtons';
 import { toast } from 'sonner';
 import { Category, ProductStatus } from '@prisma/client';
 

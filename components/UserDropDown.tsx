@@ -10,19 +10,22 @@ import {
 } from '@/components/ui/dropdown-menu';
 import { LogoutLink } from '@kinde-oss/kinde-auth-nextjs/components';
 
-interface iAppProps {
+interface UserProps {
   email: string;
   name: string;
-  userImage: string;
+  pfp: string;
 }
 
-export function UserDropdown({ email, name, userImage }: iAppProps) {
+export function UserDropdown({ email, name, pfp }: UserProps) {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button variant="ghost" className="relative h-10 w-10 rounded-full">
-          <Avatar className="h-10 w-10">
-            <AvatarImage src={userImage} alt="User Image" />
+        <Button
+          variant="ghost"
+          className="relative size-8 rounded-full border-2 sm:size-9"
+        >
+          <Avatar className="size-8 sm:size-9">
+            <AvatarImage src={pfp} alt="User Image" />
             <AvatarFallback>{name.slice(0, 3)}</AvatarFallback>
           </Avatar>
         </Button>

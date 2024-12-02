@@ -22,7 +22,7 @@ interface ProductProps {
 
 export function ProductCard({ item }: ProductProps) {
   return (
-    <div className="rounded-lg">
+    <div className="rounded-3xl">
       <Carousel className="mx-auto w-full">
         <CarouselContent>
           {item.images.map((item, index) => (
@@ -32,7 +32,7 @@ export function ProductCard({ item }: ProductProps) {
                   src={item}
                   alt="Product Image"
                   fill
-                  className="h-full w-full rounded-lg object-cover object-center"
+                  className="h-full w-full rounded-3xl object-cover object-center"
                 />
               </div>
             </CarouselItem>

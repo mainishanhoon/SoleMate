@@ -24,7 +24,7 @@ export const columns: ColumnDef<Banner>[] = [
     accessorKey: 'imageString',
     header: ({ column }) => (
       <DataTableColumnHeader
-        className="flex max-w-sm justify-start"
+        className="flex max-w-sm "
         column={column}
         title="Image"
       />
@@ -37,7 +37,7 @@ export const columns: ColumnDef<Banner>[] = [
             src={row.getValue('imageString')}
             height={100}
             width={150}
-            priority
+            loading="lazy"
             className="aspect-video rounded-md object-cover"
           />
         </div>

@@ -8,8 +8,6 @@ import { ReactNode } from 'react';
 import { NextSSRPlugin } from '@uploadthing/react/next-ssr-plugin';
 import { extractRouterConfig } from 'uploadthing/server';
 import { fileRouter } from '@/app/api/uploadthing/core';
-import Header from '@/components/Header';
-import PageContainer from '@/components/PageContainer';
 
 const montserrat = localFont({
   src: './fonts/Montserrat.woff2',
@@ -47,10 +45,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <NextSSRPlugin routerConfig={extractRouterConfig(fileRouter)} />
-          <Header />
-          <PageContainer scrollable>
-            <main className="p-2 md:p-3 lg:p-5">{children}</main>
-          </PageContainer>
+          {children}
           <Toaster richColors closeButton />
         </ThemeProvider>
       </body>

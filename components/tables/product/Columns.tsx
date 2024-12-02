@@ -32,17 +32,20 @@ export const columns: ColumnDef<Product>[] = [
     ),
     cell: ({ row }) => {
       const images = row.getValue('images') as string[];
-      const imageUrl = images?.[0];
+      const imageUrl = images?.[0] as string;
 
-      <div className="-ml-2 w-full">
-        <Image
-          alt="Product Image"
-          src={imageUrl}
-          height={100}
-          width={100}
-          className="size-20 rounded-md object-cover"
-        />
-      </div>;
+      return (
+        <div className="-ml-2 w-full">
+          <Image
+            alt="Product Image"
+            src={imageUrl}
+            height={100}
+            width={100}
+            loading="lazy"
+            className="size-20 rounded-md object-cover"
+          />
+        </div>
+      );
     },
     enableSorting: false,
     enableHiding: false,
