@@ -4,7 +4,7 @@ import { FeaturedProducts } from '@/components/storefront/Featured';
 
 export default function StoreFront() {
   return (
-    <section className='flex flex-col space-y-12'>
+    <section className="flex flex-col space-y-12">
       <BannerCarousel />
       <Categories />
       <FeaturedProducts />

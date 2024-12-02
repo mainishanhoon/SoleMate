@@ -69,46 +69,44 @@ export function DataTableRowActions<TData>({
             </DropdownMenuItem>
           </DropdownMenuGroup>
           <DropdownMenuSeparator />
-          <DropdownMenuItem asChild>
-            <Dialog>
-              <div className="rounded-sm bg-destructive px-3 py-1 text-white hover:bg-destructive/70">
-                <DialogTrigger className="flex items-center space-x-2">
-                  <Trash2 strokeWidth={3} size={15} />
-                  <span>Delete</span>
-                </DialogTrigger>
-                <DialogContent>
-                  <DialogHeader>
-                    <DialogTitle className="text-xl tracking-wide">
-                      Are you absolutely sure?
-                    </DialogTitle>
-                    <DialogDescription className="text-sm font-bold tracking-wider">
-                      This action cannot be undone. This will permanently delete
-                      your account and remove your data from our servers.
-                    </DialogDescription>
-                  </DialogHeader>
-                  <DialogFooter>
-                    <DialogClose asChild className="mr-auto">
-                      <Button type="button" variant="secondary">
-                        Cancel
-                      </Button>
-                    </DialogClose>
-                    <Form action={DeleteProduct}>
-                      <Input
-                        type="hidden"
-                        name="productId"
-                        value={row.getValue('id')}
-                      />
-                      <SubmitButton
-                        variant="destructive"
-                        text="Delete Product"
-                        toastMessage="Product has been Removed"
-                      />
-                    </Form>
-                  </DialogFooter>
-                </DialogContent>
-              </div>
-            </Dialog>
-          </DropdownMenuItem>
+          <Dialog>
+            <div className="rounded-sm bg-destructive px-3 py-1 text-white hover:bg-destructive/70">
+              <DialogTrigger className="flex items-center space-x-2">
+                <Trash2 strokeWidth={3} size={15} />
+                <span>Delete</span>
+              </DialogTrigger>
+              <DialogContent>
+                <DialogHeader>
+                  <DialogTitle className="text-xl tracking-wide">
+                    Are you absolutely sure?
+                  </DialogTitle>
+                  <DialogDescription className="text-sm font-bold tracking-wider">
+                    This action cannot be undone. This will permanently delete
+                    your account and remove your data from our servers.
+                  </DialogDescription>
+                </DialogHeader>
+                <DialogFooter>
+                  <DialogClose asChild className="mr-auto">
+                    <Button type="button" variant="secondary">
+                      Cancel
+                    </Button>
+                  </DialogClose>
+                  <Form action={DeleteProduct}>
+                    <Input
+                      type="hidden"
+                      name="productId"
+                      value={row.getValue('id')}
+                    />
+                    <SubmitButton
+                      variant="destructive"
+                      text="Delete Product"
+                      toastMessage="Product has been Removed"
+                    />
+                  </Form>
+                </DialogFooter>
+              </DialogContent>
+            </div>
+          </Dialog>
         </DropdownMenuContent>
       </DropdownMenu>
     </div>

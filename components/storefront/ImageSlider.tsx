@@ -2,7 +2,7 @@
 
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { ChevronLeftCircle, ChevronRightCircle } from 'lucide-react';
 import Image from 'next/image';
 import { useState } from 'react';
 
@@ -30,34 +30,44 @@ export function ImageSlider({ images }: ImageSliderProps) {
   }
 
   return (
-    <div className="grid items-start gap-6 md:gap-3">
-      <div className="relative overflow-hidden rounded-lg">
+    <div className="grid gap-6 md:gap-3">
+      <div className="relative overflow-hidden rounded-3xl border-4">
         <Image
           width={600}
           height={600}
           src={images[mainImageIndex]}
           alt="Product image"
-          className="h-[600px] w-[600px] object-cover"
+          className="aspect-square size-full object-cover"
         />
 
         <div className="absolute inset-0 flex items-center justify-between px-4">
-          <Button onClick={handlePreviousClick} variant="ghost" size="icon">
-            <ChevronLeft className="h-6 w-6" />
+          <Button
+            onClick={handlePreviousClick}
+            variant="secondary"
+            size="product"
+            className="rounded-full bg-muted transition-transform duration-300 ease-in-out hover:scale-125"
+          >
+            <ChevronLeftCircle strokeWidth={2.5} size={40} />
           </Button>
-          <Button onClick={handleNextClick} variant="ghost" size="icon">
-            <ChevronRight className="h-6 w-6" />
+          <Button
+            onClick={handleNextClick}
+            variant="secondary"
+            size="product"
+            className="rounded-full bg-muted transition-transform duration-300 ease-in-out hover:scale-125"
+          >
+            <ChevronRightCircle strokeWidth={2.5} size={40} />
           </Button>
         </div>
       </div>
 
-      <div className="grid grid-cols-5 gap-4">
+      <div className="mt-6 grid grid-cols-4 gap-2 sm:grid-cols-5 sm:gap-4">
         {images.map((image, index) => (
           <div
             className={cn(
               index === mainImageIndex
                 ? 'border-2 border-primary'
-                : 'border border-gray-200',
-              'relative cursor-pointer overflow-hidden rounded-lg',
+                : 'border-2 bg-muted',
+              'relative cursor-pointer overflow-hidden rounded-2xl',
             )}
             key={index}
             onClick={() => handleImageClick(index)}
@@ -65,9 +75,10 @@ export function ImageSlider({ images }: ImageSliderProps) {
             <Image
               src={image}
               alt="Product Image"
-              width={100}
-              height={100}
-              className="h-[100px] w-[100px] object-cover"
+              width={500}
+              height={500}
+              loading="lazy"
+              className="aspect-square object-cover"
             />
           </div>
         ))}

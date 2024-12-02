@@ -52,16 +52,16 @@ export default function Categories() {
           link="/products/all"
           text="All Products"
         />
-        <CategoryCard imageSrc="/kids.webp" link="/products/all" text="Kids" />
-        <CategoryCard imageSrc="/men.webp" link="/products/all" text="Men" />
+        <CategoryCard imageSrc="/kids.webp" link="/products/kids" text="Kids" />
+        <CategoryCard imageSrc="/men.webp" link="/products/men" text="Men" />
         <CategoryCard
           imageSrc="/women.webp"
-          link="/products/all"
+          link="/products/women"
           text="Women"
         />
         <CategoryCard
           imageSrc="/elder.webp"
-          link="/products/all"
+          link="/products/elder"
           text="Elders"
         />
       </div>
@@ -99,16 +99,16 @@ export function CategoryCard({ imageSrc, link, text }: CategoryCards) {
             </p>
 
             {/* Hover Indicator */}
-            <div className="absolute bottom-5 right-5 flex size-12 transform items-center justify-center rounded-full bg-white shadow-lg transition-transform duration-300 group-hover:translate-x-2">
+            <div className="absolute bottom-6 right-5 flex size-12 transform items-center justify-center rounded-full bg-muted shadow-lg transition-transform duration-300 group-hover:translate-x-2">
               <ChevronsRight
                 size={30}
-                color="hsl(var(--primary))"
+                color="hsl(var(--foreground))"
                 strokeWidth={2.5}
                 className="hidden group-hover:block"
               />
               <CircleChevronRight
                 size={30}
-                color="hsl(var(--primary))"
+                color="hsl(var(--foreground))"
                 strokeWidth={2.5}
                 className="block group-hover:hidden"
               />
