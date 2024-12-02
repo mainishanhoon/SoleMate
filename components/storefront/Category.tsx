@@ -16,7 +16,7 @@ interface CategoryCards {
 
 export default function Categories() {
   return (
-    <div className="px-4 py-24 sm:py-32">
+    <div className="max-sm:px-4">
       <div className="flex items-center justify-between max-sm:flex-col">
         <h2 className="text-2xl font-bold tracking-wider md:text-4xl">
           Shop by Category
@@ -46,7 +46,7 @@ export default function Categories() {
         </Link>
       </div>
 
-      <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-5 lg:gap-8">
+      <div className="mt-4 grid gap-6 sm:grid-cols-2 lg:grid-cols-5 lg:gap-8">
         <CategoryCard
           imageSrc="/all.webp"
           link="/products/all"

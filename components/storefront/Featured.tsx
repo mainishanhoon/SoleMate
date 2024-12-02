@@ -22,7 +22,7 @@ async function getData() {
     orderBy: {
       createdAt: 'desc',
     },
-    take: 3,
+    take: 4,
   });
 
   return data;
@@ -31,7 +31,9 @@ async function getData() {
 export function FeaturedProducts() {
   return (
     <>
-      <h2 className="text-2xl font-extrabold tracking-wider">Featured Items</h2>
+      <h2 className="text-2xl font-bold tracking-wider md:text-4xl">
+        Featured Products
+      </h2>
       <Suspense fallback={<LoadingRows />}>
         <LoadFeaturedproducts />
       </Suspense>
@@ -44,7 +46,7 @@ async function LoadFeaturedproducts() {
   const data = await getData();
 
   return (
-    <div className="mt-5 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+    <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
       {data.map((item) => (
         <ProductCard key={item.id} item={item} />
       ))}
@@ -54,7 +56,8 @@ async function LoadFeaturedproducts() {
 
 function LoadingRows() {
   return (
-    <div className="mt-5 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+    <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+      <LoadingProductCard />
       <LoadingProductCard />
       <LoadingProductCard />
       <LoadingProductCard />

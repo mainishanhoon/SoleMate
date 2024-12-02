@@ -31,18 +31,26 @@ export const AdminNavigationLinks = [
 export const UserNavigationLinks = [
   {
     name: 'Home',
-    href: '/home',
+    href: '/',
   },
   {
     name: 'All Products',
-    href: '/products',
+    href: '/products/all',
+  },
+  {
+    name: 'Kids',
+    href: '/products/kids',
   },
   {
     name: 'Men',
-    href: '/men',
+    href: '/products/men',
   },
   {
     name: 'Women',
-    href: '/women',
+    href: '/products/women',
+  },
+  {
+    name: 'Elder',
+    href: '/products/elder',
   },
 ];

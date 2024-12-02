@@ -1,5 +1,5 @@
-import { ProductCard } from '@/app/components/storefront/ProductCard';
-import prisma from '@/app/lib/db';
+import { ProductCard } from '@/components/storefront/ProductCard';
+import prisma from '@/lib/db';
 import { notFound } from 'next/navigation';
 import { unstable_noStore as noStore } from 'next/cache';
 
@@ -15,7 +15,7 @@ async function getData(productCategory: string) {
           description: true,
         },
         where: {
-          status: 'published',
+          status: 'Published',
         },
       });
 
@@ -27,8 +27,8 @@ async function getData(productCategory: string) {
     case 'men': {
       const data = await prisma.product.findMany({
         where: {
-          status: 'published',
-          category: 'men',
+          status: 'Published',
+          category: 'Men',
         },
         select: {
           name: true,
@@ -47,8 +47,8 @@ async function getData(productCategory: string) {
     case 'women': {
       const data = await prisma.product.findMany({
         where: {
-          status: 'published',
-          category: 'women',
+          status: 'Published',
+          category: 'Women',
         },
         select: {
           name: true,
@@ -67,8 +67,8 @@ async function getData(productCategory: string) {
     case 'kids': {
       const data = await prisma.product.findMany({
         where: {
-          status: 'published',
-          category: 'kids',
+          status: 'Published',
+          category: 'Kids',
         },
         select: {
           name: true,
