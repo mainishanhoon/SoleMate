@@ -44,6 +44,14 @@ interface UpdateProps {
     images: string[];
     category: string;
     isFeatured: boolean;
+    materialType: string;
+    closureType: string;
+    heelType: string;
+    style: string;
+    countryOfOrigin: string;
+    manufacturer: string;
+    weight: string;
+    dimensions: string;
   };
 }
 
@@ -69,6 +77,7 @@ export default function ProductUpdationForm({ data }: UpdateProps) {
   return (
     <>
       <Form id={form.id} onSubmit={form.onSubmit} action={formAction}>
+        <Input type='hidden' name='productId' value={data.id}/>
         <div className="flex items-center gap-4">
           <Button variant="outline" size="icon" asChild>
             <Link href="/dashboard/products">
@@ -88,9 +97,8 @@ export default function ProductUpdationForm({ data }: UpdateProps) {
           </CardHeader>
           <CardContent>
             <div className="flex flex-col gap-6">
-              <div className="grid gap-5 sm:grid-cols-2">
+              <div className="grid gap-5 md:grid-cols-3">
                 <div className="flex flex-col gap-3">
-                  <Input type="hidden" name="productId" value={data.id} />
                   <Label>Name</Label>
                   <Input
                     type="text"
@@ -104,8 +112,125 @@ export default function ProductUpdationForm({ data }: UpdateProps) {
                     {fields.name.errors}
                   </p>
                 </div>
-
                 <div className="flex flex-col gap-3">
+                  <Label>Material Type</Label>
+                  <Input
+                    type="text"
+                    key={fields.materialType.key}
+                    name={fields.materialType.name}
+                    defaultValue={data.materialType}
+                    className="w-full"
+                    placeholder="Material"
+                  />
+                  <p className="-mt-2 ml-3 font-mont text-destructive">
+                    {fields.materialType.errors}
+                  </p>
+                </div>
+                <div className="flex flex-col gap-3">
+                  <Label>Closure Type</Label>
+                  <Input
+                    type="text"
+                    key={fields.closureType.key}
+                    name={fields.closureType.name}
+                    defaultValue={data.closureType}
+                    className="w-full"
+                    placeholder="Closure"
+                  />
+                  <p className="-mt-2 ml-3 font-mont text-destructive">
+                    {fields.closureType.errors}
+                  </p>
+                </div>
+              </div>
+              <div className="grid gap-5 md:grid-cols-3">
+                <div className="flex flex-col gap-3">
+                  <Label>Heel Type</Label>
+                  <Input
+                    type="text"
+                    key={fields.heelType.key}
+                    name={fields.heelType.name}
+                    defaultValue={data.heelType}
+                    className="w-full"
+                    placeholder="Heel"
+                  />
+                  <p className="-mt-2 ml-3 font-mont text-destructive">
+                    {fields.heelType.errors}
+                  </p>
+                </div>
+                <div className="flex flex-col gap-3">
+                  <Label>Style</Label>
+                  <Input
+                    type="text"
+                    key={fields.style.key}
+                    name={fields.style.name}
+                    defaultValue={data.style}
+                    className="w-full"
+                    placeholder="Style"
+                  />
+                  <p className="-mt-2 ml-3 font-mont text-destructive">
+                    {fields.style.errors}
+                  </p>
+                </div>
+                <div className="flex flex-col gap-3">
+                  <Label>Country of Origin</Label>
+                  <Input
+                    type="text"
+                    key={fields.countryOfOrigin.key}
+                    name={fields.countryOfOrigin.name}
+                    defaultValue={data.countryOfOrigin}
+                    className="w-full"
+                    placeholder="Country"
+                  />
+                  <p className="-mt-2 ml-3 font-mont text-destructive">
+                    {fields.countryOfOrigin.errors}
+                  </p>
+                </div>
+              </div>
+              <div className="grid gap-5 md:grid-cols-3">
+                <div className="flex flex-col gap-3">
+                  <Label>Manufacturer</Label>
+                  <Input
+                    type="text"
+                    key={fields.manufacturer.key}
+                    name={fields.manufacturer.name}
+                    defaultValue={data.manufacturer}
+                    className="w-full"
+                    placeholder="Manufacturer"
+                  />
+                  <p className="-mt-2 ml-3 font-mont text-destructive">
+                    {fields.manufacturer.errors}
+                  </p>
+                </div>
+                <div className="flex flex-col gap-3">
+                  <Label>Weight</Label>
+                  <Input
+                    type="text"
+                    key={fields.weight.key}
+                    name={fields.weight.name}
+                    defaultValue={data.weight}
+                    className="w-full"
+                    placeholder="in grams"
+                  />
+                  <p className="-mt-2 ml-3 font-mont text-destructive">
+                    {fields.weight.errors}
+                  </p>
+                </div>
+                <div className="flex flex-col gap-3">
+                  <Label>Dimensions</Label>
+                  <Input
+                    type="text"
+                    key={fields.dimensions.key}
+                    name={fields.dimensions.name}
+                    defaultValue={data.dimensions}
+                    className="w-full"
+                    placeholder="L x B x H (in cms)"
+                  />
+                  <p className="-mt-2 ml-3 font-mont text-destructive">
+                    {fields.dimensions.errors}
+                  </p>
+                </div>
+              </div>
+              <div className="grid gap-5 md:grid-cols-3">
+                <div className="col-span-2 flex flex-col gap-3">
                   <Label>Description</Label>
                   <Textarea
                     key={fields.description.key}
@@ -117,9 +242,20 @@ export default function ProductUpdationForm({ data }: UpdateProps) {
                     {fields.description.errors}
                   </p>
                 </div>
+                <div className="col-span-1 flex flex-col gap-3">
+                  <Label className="text-nowrap">Featured Product</Label>
+                  <Switch
+                    key={fields.isFeatured.key}
+                    name={fields.isFeatured.name}
+                    defaultValue={data.isFeatured}
+                    className="ml-3"
+                  />
+                  <p className="-mt-2 ml-3 font-mont text-destructive">
+                    {fields.isFeatured.errors}
+                  </p>
+                </div>
               </div>
-
-              <div className="grid gap-5 sm:grid-cols-2">
+              <div className="grid gap-5 md:grid-cols-3">
                 <div className="flex flex-col gap-3">
                   <Label>Price</Label>
                   <Input
@@ -128,24 +264,11 @@ export default function ProductUpdationForm({ data }: UpdateProps) {
                     defaultValue={data.price}
                     type="number"
                     placeholder="$55"
+                    className="w-full"
                   />
                   <p className="-mt-2 ml-3 font-mont text-destructive">
                     {fields.price.errors}
                   </p>
-                </div>
-                <div className="grid gap-5 sm:grid-cols-2">
-                  <div className="flex flex-col gap-3">
-                    <Label className="text-nowrap">Featured Product</Label>
-                    <Switch
-                      key={fields.isFeatured.key}
-                      name={fields.isFeatured.name}
-                      checked={data.isFeatured}
-                      className="ml-3"
-                    />
-                    <p className="-mt-2 ml-3 font-mont text-destructive">
-                      {fields.isFeatured.errors}
-                    </p>
-                  </div>
                 </div>
                 <div className="flex flex-col gap-3">
                   <Label>Status</Label>
@@ -200,7 +323,6 @@ export default function ProductUpdationForm({ data }: UpdateProps) {
                   </p>
                 </div>
               </div>
-
               <div className="flex flex-col items-center gap-3">
                 <Label>Images</Label>
                 <input

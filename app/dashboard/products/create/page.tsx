@@ -77,7 +77,7 @@ export default function ProductCreationForm() {
           </CardHeader>
           <CardContent>
             <div className="flex flex-col gap-6">
-              <div className="grid gap-5 sm:grid-cols-2">
+              <div className="grid gap-5 md:grid-cols-3">
                 <div className="flex flex-col gap-3">
                   <Label>Name</Label>
                   <Input
@@ -88,13 +88,129 @@ export default function ProductCreationForm() {
                     className="w-full"
                     placeholder="Product Name"
                   />
-
                   <p className="-mt-2 ml-3 font-mont text-destructive">
                     {fields.name.errors}
                   </p>
                 </div>
-
                 <div className="flex flex-col gap-3">
+                  <Label>Material Type</Label>
+                  <Input
+                    type="text"
+                    key={fields.materialType.key}
+                    name={fields.materialType.name}
+                    defaultValue={fields.materialType.initialValue}
+                    className="w-full"
+                    placeholder="Material"
+                  />
+                  <p className="-mt-2 ml-3 font-mont text-destructive">
+                    {fields.materialType.errors}
+                  </p>
+                </div>
+                <div className="flex flex-col gap-3">
+                  <Label>Closure Type</Label>
+                  <Input
+                    type="text"
+                    key={fields.closureType.key}
+                    name={fields.closureType.name}
+                    defaultValue={fields.closureType.initialValue}
+                    className="w-full"
+                    placeholder="Closure"
+                  />
+                  <p className="-mt-2 ml-3 font-mont text-destructive">
+                    {fields.closureType.errors}
+                  </p>
+                </div>
+              </div>
+              <div className="grid gap-5 md:grid-cols-3">
+                <div className="flex flex-col gap-3">
+                  <Label>Heel Type</Label>
+                  <Input
+                    type="text"
+                    key={fields.heelType.key}
+                    name={fields.heelType.name}
+                    defaultValue={fields.heelType.initialValue}
+                    className="w-full"
+                    placeholder="Heel"
+                  />
+                  <p className="-mt-2 ml-3 font-mont text-destructive">
+                    {fields.heelType.errors}
+                  </p>
+                </div>
+                <div className="flex flex-col gap-3">
+                  <Label>Style</Label>
+                  <Input
+                    type="text"
+                    key={fields.style.key}
+                    name={fields.style.name}
+                    defaultValue={fields.style.initialValue}
+                    className="w-full"
+                    placeholder="Style"
+                  />
+                  <p className="-mt-2 ml-3 font-mont text-destructive">
+                    {fields.style.errors}
+                  </p>
+                </div>
+                <div className="flex flex-col gap-3">
+                  <Label>Country of Origin</Label>
+                  <Input
+                    type="text"
+                    key={fields.countryOfOrigin.key}
+                    name={fields.countryOfOrigin.name}
+                    defaultValue={fields.countryOfOrigin.initialValue}
+                    className="w-full"
+                    placeholder="Country"
+                  />
+                  <p className="-mt-2 ml-3 font-mont text-destructive">
+                    {fields.countryOfOrigin.errors}
+                  </p>
+                </div>
+              </div>
+              <div className="grid gap-5 md:grid-cols-3">
+                <div className="flex flex-col gap-3">
+                  <Label>Manufacturer</Label>
+                  <Input
+                    type="text"
+                    key={fields.manufacturer.key}
+                    name={fields.manufacturer.name}
+                    defaultValue={fields.manufacturer.initialValue}
+                    className="w-full"
+                    placeholder="Manufacturer"
+                  />
+                  <p className="-mt-2 ml-3 font-mont text-destructive">
+                    {fields.manufacturer.errors}
+                  </p>
+                </div>
+                <div className="flex flex-col gap-3">
+                  <Label>Weight</Label>
+                  <Input
+                    type="text"
+                    key={fields.weight.key}
+                    name={fields.weight.name}
+                    defaultValue={fields.weight.initialValue}
+                    className="w-full"
+                    placeholder="in grams"
+                  />
+                  <p className="-mt-2 ml-3 font-mont text-destructive">
+                    {fields.weight.errors}
+                  </p>
+                </div>
+                <div className="flex flex-col gap-3">
+                  <Label>Dimensions</Label>
+                  <Input
+                    type="text"
+                    key={fields.dimensions.key}
+                    name={fields.dimensions.name}
+                    defaultValue={fields.dimensions.initialValue}
+                    className="w-full"
+                    placeholder="L x B x H (in cms)"
+                  />
+                  <p className="-mt-2 ml-3 font-mont text-destructive">
+                    {fields.dimensions.errors}
+                  </p>
+                </div>
+              </div>
+              <div className="grid gap-5 md:grid-cols-3">
+                <div className="col-span-2 flex flex-col gap-3">
                   <Label>Description</Label>
                   <Textarea
                     key={fields.description.key}
@@ -106,8 +222,20 @@ export default function ProductCreationForm() {
                     {fields.description.errors}
                   </p>
                 </div>
+                <div className="col-span-1 flex flex-col gap-3">
+                  <Label className="text-nowrap">Featured Product</Label>
+                  <Switch
+                    key={fields.isFeatured.key}
+                    name={fields.isFeatured.name}
+                    defaultValue={fields.isFeatured.initialValue}
+                    className="ml-3"
+                  />
+                  <p className="-mt-2 ml-3 font-mont text-destructive">
+                    {fields.isFeatured.errors}
+                  </p>
+                </div>
               </div>
-              <div className="grid gap-5 sm:grid-cols-2">
+              <div className="grid gap-5 md:grid-cols-3">
                 <div className="flex flex-col gap-3">
                   <Label>Price</Label>
                   <Input
@@ -116,24 +244,11 @@ export default function ProductCreationForm() {
                     defaultValue={fields.price.initialValue}
                     type="number"
                     placeholder="$55"
+                    className="w-full"
                   />
                   <p className="-mt-2 ml-3 font-mont text-destructive">
                     {fields.price.errors}
                   </p>
-                </div>
-                <div className="grid gap-5 sm:grid-cols-2">
-                  <div className="flex flex-col gap-3">
-                    <Label className="text-nowrap">Featured Product</Label>
-                    <Switch
-                      key={fields.isFeatured.key}
-                      name={fields.isFeatured.name}
-                      defaultValue={fields.isFeatured.initialValue}
-                      className="ml-3"
-                    />
-                    <p className="-mt-2 ml-3 font-mont text-destructive">
-                      {fields.isFeatured.errors}
-                    </p>
-                  </div>
                 </div>
                 <div className="flex flex-col gap-3">
                   <Label>Status</Label>
@@ -188,7 +303,6 @@ export default function ProductCreationForm() {
                   </p>
                 </div>
               </div>
-
               <div className="flex flex-col items-center gap-3">
                 <Label>Images</Label>
                 <input

@@ -2,7 +2,6 @@
 
 import { Table } from '@tanstack/react-table';
 import { Input } from '@/components/ui/input';
-import { DataTableFacetedFilter } from './FacetedFilter';
 import { CalendarDatePicker } from '@/components/CalendarDatePicker';
 import { useState } from 'react';
 import { DataTableViewOptions } from './ViewOptions';

@@ -26,14 +26,23 @@ model User {
 }
 
 model Product {
-  id          String        @id @default(uuid())
-  name        String
-  description String
-  status      ProductStatus
-  price       Int
-  images      String[]
-  category    Category
-  isFeatured  Boolean       @default(false)
+  id              String        @id @default(uuid())
+  name            String
+  description     String
+  status          ProductStatus
+  price           Int
+  images          String[]
+  category        Category
+  isFeatured      Boolean       @default(false)
+  materialType    String
+  closureType     String
+  heelType        String
+  style           String
+  countryOfOrigin String
+
+  manufacturer String
+  weight       String
+  dimensions   String
 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt

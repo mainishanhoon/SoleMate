@@ -35,6 +35,14 @@ export async function CreateProductAction(
       images: flattenURLs,
       category: submission.value.category,
       isFeatured: submission.value.isFeatured === true ? true : false,
+      materialType: submission.value.materialType,
+      closureType: submission.value.closureType,
+      heelType: submission.value.heelType,
+      style: submission.value.style,
+      countryOfOrigin: submission.value.countryOfOrigin,
+      manufacturer: submission.value.manufacturer,
+      weight: submission.value.weight,
+      dimensions: submission.value.dimensions,
     },
   });
 
@@ -75,6 +83,14 @@ export async function UpdateProductAction(
       isFeatured: submission.value.isFeatured === true ? true : false,
       status: submission.value.status,
       images: flattenURLs,
+      materialType: submission.value.materialType,
+      closureType: submission.value.closureType,
+      heelType: submission.value.heelType,
+      style: submission.value.style,
+      countryOfOrigin: submission.value.countryOfOrigin,
+      manufacturer: submission.value.manufacturer,
+      weight: submission.value.weight,
+      dimensions: submission.value.dimensions,
     },
   });
 
