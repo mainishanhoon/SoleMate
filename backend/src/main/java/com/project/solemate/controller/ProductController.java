@@ -3,20 +3,29 @@ package com.project.solemate.controller;
 import com.project.solemate.model.Product;
 import com.project.solemate.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@CrossOrigin(origins = "http://localhost:5173")
 @RestController
-@RequestMapping("/api")
-public class SneakerController {
+@RequestMapping("/api/products")
+public class ProductController {
 
     @Autowired
     private ProductService sneaker;
 
     @GetMapping("/{id}")
-    public Product fetchOneShoe(@PathVariable int id) {
-        return sneaker.fetchOne(id);
+    public ResponseEntity<Product> fetchOneShoe(@PathVariable("id") int id) {
+        Product product = sneaker.fetchOne(id);
+
+        if (product == null) {
+            return ResponseEntity.notFound().build();
+        } else {
+            return ResponseEntity.ok(product);
+        }
     }
 
     @PostMapping
@@ -40,8 +49,8 @@ public class SneakerController {
     }
 
     @GetMapping
-    public List<Product> fetchAllProduct(@PathVariable String category) {
-        return sneaker.fetchAll();
+    public ResponseEntity<List<Product>> fetchAllProduct() {
+        return new ResponseEntity<>(sneaker.fetchAll(), HttpStatus.OK);
     }
 
     @DeleteMapping("/{id}")
