@@ -4,8 +4,10 @@ import com.project.solemate.model.Product;
 import com.project.solemate.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
 import java.util.List;
 
@@ -15,11 +17,11 @@ import java.util.List;
 public class ProductController {
 
     @Autowired
-    private ProductService sneaker;
+    private ProductService service;
 
     @GetMapping("/{id}")
-    public ResponseEntity<Product> fetchOneShoe(@PathVariable("id") int id) {
-        Product product = sneaker.fetchOne(id);
+    public ResponseEntity<Product> getProductById(@PathVariable("id") int id) {
+        Product product = service.fetchProductsById(id);
 
         if (product == null) {
             return ResponseEntity.notFound().build();
@@ -28,33 +30,46 @@ public class ProductController {
         }
     }
 
-    @PostMapping
-    public String addShoe(@RequestBody Product product) {
-        return sneaker.addProduct(product);
+    @PostMapping("/product")
+    public ResponseEntity<?> addProduct(@RequestPart Product product, @RequestPart MultipartFile imageFile) {
+        try {
+            Product savedProduct = service.addProduct(product, imageFile);
+            return ResponseEntity.status(HttpStatus.CREATED).body(savedProduct);
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(e.getMessage());
+        }
     }
 
     @GetMapping("/category/{category}")
     public List<Product> fetchByCategory(@PathVariable String category) {
-        return sneaker.fetchProductsByCategory(category);
+        return service.fetchProductsByCategory(category);
     }
 
     @GetMapping("/brand/{brand}")
     public List<Product> fetchByBrand(@PathVariable String brand) {
-        return sneaker.fetchProductsByBrand(brand);
+        return service.fetchProductsByBrand(brand);
     }
 
     @GetMapping("/status/{available}")
     public List<Product> fetchByAvailability(@PathVariable boolean available) {
-        return sneaker.fetchProductsByAvailability(available);
+        return service.fetchProductsByAvailability(available);
     }
 
     @GetMapping
-    public ResponseEntity<List<Product>> fetchAllProduct() {
-        return new ResponseEntity<>(sneaker.fetchAll(), HttpStatus.OK);
+    public ResponseEntity<List<Product>> fetchAllProductsProduct() {
+        return ResponseEntity.ok(service.fetchAllProducts());
+    }
+
+    @GetMapping("/{id}/image")
+    public ResponseEntity<byte[]> getImageById(@PathVariable int id){
+        Product product = service.fetchProductsById(id);
+        byte[] imageFile = product.getImageData();
+        
+        return ResponseEntity.ok().body(imageFile);
     }
 
     @DeleteMapping("/{id}")
     public String deleteShoe(@PathVariable int id) {
-        return sneaker.delete(id);
+        return service.delete(id);
     }
 }

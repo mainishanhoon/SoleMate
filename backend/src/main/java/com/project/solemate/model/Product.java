@@ -1,10 +1,7 @@
 package com.project.solemate.model;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.*;
 
 import java.math.BigDecimal;
@@ -28,4 +25,10 @@ public class Product {
     private boolean available;
     private int quantity;
     private Date releaseDate;
+    private String imageName;
+    private String imageType;
+
+    @Lob
+    private byte[] imageData;
+
 }

@@ -3,7 +3,7 @@ import { useQuery } from '@tanstack/react-query';
 
 import { fetchProduct } from '@/server.ts';
 
-export default function ProductPage() {
+export default function ProductDetailPage() {
   const { id } = useParams<{ id: string }>();
 
   const {
