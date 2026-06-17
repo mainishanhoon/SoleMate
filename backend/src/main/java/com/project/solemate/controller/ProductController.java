@@ -9,11 +9,12 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
+import java.text.MessageFormat;
 import java.util.List;
 
 @CrossOrigin(origins = "http://localhost:5173")
 @RestController
-@RequestMapping("/api/products")
+@RequestMapping("/api/product")
 public class ProductController {
 
     @Autowired
@@ -30,13 +31,19 @@ public class ProductController {
         }
     }
 
-    @PostMapping("/product")
-    public ResponseEntity<?> addProduct(@RequestPart Product product, @RequestPart MultipartFile imageFile) {
+    @PostMapping(consumes = { MediaType.MULTIPART_FORM_DATA_VALUE })
+    public ResponseEntity<String> addProduct(@RequestPart Product product, @RequestPart MultipartFile imageFile) {
         try {
             Product savedProduct = service.addProduct(product, imageFile);
-            return ResponseEntity.status(HttpStatus.CREATED).body(savedProduct);
+
+            return ResponseEntity.status(HttpStatus.CREATED).body(MessageFormat.format(
+                    "Product ''{0}'' was successfully created with ID: {1}.",
+                    savedProduct.getName(), savedProduct.getId()
+            ));
+
         } catch (Exception e) {
-            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(e.getMessage());
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(MessageFormat.format("Failed to add product ''{0}''. Reason: {1}",
+                    product.getName(), e.getMessage()));
         }
     }
 
@@ -61,15 +68,39 @@ public class ProductController {
     }
 
     @GetMapping("/{id}/image")
-    public ResponseEntity<byte[]> getImageById(@PathVariable int id){
+    public ResponseEntity<byte[]> getImageById(@PathVariable int id) {
         Product product = service.fetchProductsById(id);
         byte[] imageFile = product.getImageData();
-        
+
         return ResponseEntity.ok().body(imageFile);
     }
 
+    @PutMapping(value = "/{id}", consumes = { MediaType.MULTIPART_FORM_DATA_VALUE })
+    public ResponseEntity<String> updateProduct(@PathVariable int id, @RequestPart Product product, @RequestPart MultipartFile imageFile) {
+        try {
+            service.updateProduct(id, product, imageFile);
+            return ResponseEntity.status(HttpStatus.OK).body(MessageFormat.format("Product with id: {0} was successfully updated.", id));
+
+        } catch (RuntimeException e) {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(MessageFormat.format("Failed to update. Product with id {0} not found. Reason: {1}", id, e.getMessage()));
+
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(MessageFormat.format("Error updating product with id {0}. System error: {1}", id, e.getMessage()));
+        }
+    }
+
     @DeleteMapping("/{id}")
-    public String deleteShoe(@PathVariable int id) {
-        return service.delete(id);
+    public ResponseEntity<String> deleteProduct(@PathVariable int id) {
+        try {
+            service.deleteProduct(id);
+            return ResponseEntity.status(HttpStatus.OK)
+                    .body(MessageFormat.format("Product with id: {0} was successfully deleted.", id));
+
+        } catch (RuntimeException e) {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(MessageFormat.format("Failed to delete. Product with id {0} not found. Reason: {1}", id, e.getMessage()));
+
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(MessageFormat.format("Error deleting product with id {0}. System error: {1}", id, e.getMessage()));
+        }
     }
 }

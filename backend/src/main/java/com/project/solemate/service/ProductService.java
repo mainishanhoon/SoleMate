@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
+import java.text.MessageFormat;
 import java.util.List;
 
 @Service
@@ -44,8 +45,23 @@ public class ProductService {
         return repo.findAll();
     }
 
-    public String delete(int prodID) {
-        repo.deleteById(prodID);
-        return "Successfully Deleted";
+    public void deleteProduct(int id) throws RuntimeException {
+        if (!repo.existsById(id)) {
+            throw new RuntimeException(MessageFormat.format("Product not found with id: {0}", id));
+        }
+
+        repo.deleteById(id);
+    }
+
+    public void updateProduct(int id, Product product, MultipartFile imageFile) throws IOException {
+        product.setId(id);
+
+        if (imageFile != null && !imageFile.isEmpty()) {
+            product.setImageName(imageFile.getOriginalFilename());
+            product.setImageData(imageFile.getBytes());
+            product.setImageType(imageFile.getContentType());
+        }
+
+        repo.save(product);
     }
 }

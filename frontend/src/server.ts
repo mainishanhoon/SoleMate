@@ -1,7 +1,7 @@
 import { Product } from '@/types/product.ts';
 
 export const fetchProduct = async (id: string): Promise<Product> => {
-  const res = await fetch(`http://localhost:8080/api/products/${id}`);
+  const res = await fetch(`http://localhost:8080/api/product/${id}`);
 
   if (!res.ok) {
     throw new Error('Product blueprint profile missing from database mapping.');
@@ -11,7 +11,7 @@ export const fetchProduct = async (id: string): Promise<Product> => {
 };
 
 export const fetchAllProducts = async (): Promise<Product[]> => {
-  const res = await fetch(`http://localhost:8080/api/products`);
+  const res = await fetch(`http://localhost:8080/api/product`);
 
   if (!res.ok) {
     throw new Error('Product blueprint profile missing from database mapping.');
