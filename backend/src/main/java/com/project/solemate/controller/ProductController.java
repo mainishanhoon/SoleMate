@@ -62,6 +62,19 @@ public class ProductController {
         return service.fetchProductsByAvailability(available);
     }
 
+    @GetMapping("/search")
+    public ResponseEntity<List<Product>> fetch(@RequestParam(name = "keyword", required = false, defaultValue = "") String keyword) {
+
+        System.out.println("Searching: " + keyword);
+        List<Product> products = service.findProducts(keyword);
+
+        if (products.isEmpty()) {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
+        }
+
+        return ResponseEntity.ok(products);
+    }
+
     @GetMapping
     public ResponseEntity<List<Product>> fetchAllProductsProduct() {
         return ResponseEntity.ok(service.fetchAllProducts());

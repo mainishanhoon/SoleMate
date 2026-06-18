@@ -8,4 +8,8 @@ export interface Product {
   available: boolean;
   quantity: number;
   releaseDate: string;
+
+  imageData?: string;
+  imageName?: string;
+  imageType?: string;
 }

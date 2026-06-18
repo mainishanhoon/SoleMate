@@ -25,10 +25,10 @@ public class Product {
     private boolean available;
     private int quantity;
     private Date releaseDate;
-    private String imageName;
-    private String imageType;
 
     @Lob
+    @Column(columnDefinition = "BYTEA")
     private byte[] imageData;
-
+    private String imageName;
+    private String imageType;
 }

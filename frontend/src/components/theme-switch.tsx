@@ -1,4 +1,4 @@
-import { FC, useCallback } from 'react';
+import { useCallback } from 'react';
 import { useTheme } from '@heroui/react';
 import clsx from 'clsx';
 import { Moon, Sun2 } from '@solar-icons/react-perf/BoldDuotone';
@@ -7,8 +7,8 @@ export interface ThemeSwitchProps {
   className?: string;
 }
 
-export const ThemeSwitch: FC<ThemeSwitchProps> = ({ className }) => {
-  const { resolvedTheme, setTheme } = useTheme('light');
+export default function ThemeSwitch({ className }: ThemeSwitchProps) {
+  const { resolvedTheme, setTheme } = useTheme();
 
   const isLight = resolvedTheme === 'light';
 
@@ -34,4 +34,4 @@ export const ThemeSwitch: FC<ThemeSwitchProps> = ({ className }) => {
       {isLight ? <Moon size={26} /> : <Sun2 size={26} />}
     </button>
   );
-};
+}

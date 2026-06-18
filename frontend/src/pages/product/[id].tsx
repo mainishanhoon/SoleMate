@@ -1,7 +1,7 @@
 import { useParams } from 'react-router-dom';
 import { useQuery } from '@tanstack/react-query';
 
-import { fetchProduct } from '@/server.ts';
+import { fetchProduct } from '@/service.ts';
 
 export default function ProductDetailPage() {
   const { id } = useParams<{ id: string }>();

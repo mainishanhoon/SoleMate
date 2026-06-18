@@ -1,4 +1,19 @@
-INSERT INTO product (id, name, description, brand, price, category, available, quantity, release_Date) VALUES
+CREATE TABLE IF NOT EXISTS products (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    description TEXT,
+    brand VARCHAR(100),
+    price DECIMAL(19, 2) NOT NULL,
+    category VARCHAR(100),
+    available BOOLEAN DEFAULT TRUE,
+    quantity INTEGER DEFAULT 0,
+    release_date DATE,
+    image_data BYTEA,             -- PostgreSQL type for @Lob / byte[]
+    image_name VARCHAR(255),
+    image_type VARCHAR(50)
+);
+
+INSERT INTO products (id, name, description, brand, price, category, available, quantity, release_Date) VALUES
 -- --- CATEGORY: SNEAKERS & RUNNING (10 items) ---
 (1, 'Air Max Pulse', 'Next-gen cushioning lifestyle sneaker', 'Nike', 149.99, 'Sneakers', true, 50, '2026-01-15'),
 (2, 'Ultraboost Light', 'High-performance running shoe with boost foam', 'Adidas', 180.00, 'Running', true, 40, '2026-02-10'),

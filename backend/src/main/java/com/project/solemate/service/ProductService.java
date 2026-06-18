@@ -41,6 +41,10 @@ public class ProductService {
         return repo.findByAvailable(available);
     }
 
+    public List<Product> findProducts(String keyword) {
+        return repo.searchProducts(keyword);
+    }
+
     public List<Product> fetchAllProducts() {
         return repo.findAll();
     }

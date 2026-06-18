@@ -1,6 +1,6 @@
 import { useQuery } from '@tanstack/react-query';
 
-import { fetchAllProducts } from '@/server.ts';
+import { fetchAllProducts } from '@/service.ts';
 import ProductCard from '@/components/ProductCard.tsx';
 
 export default function ProductPage() {

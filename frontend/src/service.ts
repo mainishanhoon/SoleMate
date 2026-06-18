@@ -19,3 +19,15 @@ export const fetchAllProducts = async (): Promise<Product[]> => {
 
   return res.json();
 };
+
+export const searchProduct = async (value: string): Promise<Product[]> => {
+  const res = await fetch(
+    `http://localhost:8080/api/product/search?keyword=${encodeURIComponent(value)}`
+  );
+
+  if (!res.ok) {
+    throw new Error('No Product Found');
+  }
+
+  return res.json();
+};
