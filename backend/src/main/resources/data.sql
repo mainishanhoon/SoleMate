@@ -8,7 +8,7 @@ CREATE TABLE IF NOT EXISTS products (
     available BOOLEAN DEFAULT TRUE,
     quantity INTEGER DEFAULT 0,
     release_date DATE,
-    image_data BYTEA,             -- PostgreSQL type for @Lob / byte[]
+    image_data BYTEA,
     image_name VARCHAR(255),
     image_type VARCHAR(50)
 );

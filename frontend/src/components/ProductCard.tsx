@@ -32,9 +32,8 @@ export default function ProductCard({ product }: ProductCardProps) {
       <CardBody className="flex flex-col gap-4 overflow-hidden p-4">
         <a
           className="block cursor-pointer group-hover:no-underline"
-          href={`/products/${id}`}
+          href={`/product/${id}`}
         >
-          {/* Product Image Section */}
           <div className="relative aspect-square w-full overflow-hidden rounded-xl border border-white/5 bg-neutral-900/50">
             {(!available || quantity === 0) && (
               <span className="absolute inset-0 z-20 m-auto h-fit w-fit rounded-md bg-red-500/90 px-3 py-1.5 text-xs font-bold tracking-wider text-white uppercase shadow-lg">
@@ -71,12 +70,10 @@ export default function ProductCard({ product }: ProductCardProps) {
               {name}
             </h3>
 
-            {/* Description */}
             <p className="mt-1 line-clamp-2 text-xs leading-relaxed text-white/50">
               {description}
             </p>
 
-            {/* Category & Stock Status */}
             <div className="mt-3 flex items-center justify-between text-[11px] text-white/40">
               <span className="rounded-md border border-white/5 bg-white/5 px-2 py-0.5 font-mono tracking-wider uppercase">
                 {category}
@@ -92,14 +89,12 @@ export default function ProductCard({ product }: ProductCardProps) {
               </span>
             </div>
 
-            {/* Price */}
             <p className="mt-3 bg-gradient-to-r from-white to-white/60 bg-clip-text text-xl font-black text-transparent">
               ${price.toFixed(2)}
             </p>
           </div>
         </a>
 
-        {/* Action Button */}
         <Button
           className={`w-full rounded-xl font-semibold shadow-lg transition-all ${
             available && quantity > 0
