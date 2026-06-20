@@ -2,48 +2,6 @@ import * as React from 'react';
 
 import { IconSvgProps } from '@/types';
 
-export const Logo: React.FC<IconSvgProps> = ({
-  size = 36,
-  height,
-  ...props
-}) => (
-  <svg
-    fill="none"
-    height={size || height}
-    viewBox="0 0 32 32"
-    width={size || height}
-    {...props}
-  >
-    <path
-      clipRule="evenodd"
-      d="M17.6482 10.1305L15.8785 7.02583L7.02979 22.5499H10.5278L17.6482 10.1305ZM19.8798 14.0457L18.11 17.1983L19.394 19.4511H16.8453L15.1056 22.5499H24.7272L19.8798 14.0457Z"
-      fill="currentColor"
-      fillRule="evenodd"
-    />
-  </svg>
-);
-
-export const TwitterIcon: React.FC<IconSvgProps> = ({
-  size = 24,
-  width,
-  height,
-  ...props
-}) => {
-  return (
-    <svg
-      height={size || height}
-      viewBox="0 0 24 24"
-      width={size || width}
-      {...props}
-    >
-      <path
-        d="M19.633 7.997c.013.175.013.349.013.523 0 5.325-4.053 11.461-11.46 11.461-2.282 0-4.402-.661-6.186-1.809.324.037.636.05.973.05a8.07 8.07 0 0 0 5.001-1.721 4.036 4.036 0 0 1-3.767-2.793c.249.037.499.062.761.062.361 0 .724-.05 1.061-.137a4.027 4.027 0 0 1-3.23-3.953v-.05c.537.299 1.16.486 1.82.511a4.022 4.022 0 0 1-1.796-3.354c0-.748.199-1.434.548-2.032a11.457 11.457 0 0 0 8.306 4.215c-.062-.3-.1-.611-.1-.923a4.026 4.026 0 0 1 4.028-4.028c1.16 0 2.207.486 2.943 1.272a7.957 7.957 0 0 0 2.556-.973 4.02 4.02 0 0 1-1.771 2.22 8.073 8.073 0 0 0 2.319-.624 8.645 8.645 0 0 1-2.019 2.083z"
-        fill="currentColor"
-      />
-    </svg>
-  );
-};
-
 export const GithubIcon: React.FC<IconSvgProps> = ({
   size = 24,
   width,
@@ -58,33 +16,128 @@ export const GithubIcon: React.FC<IconSvgProps> = ({
       {...props}
     >
       <path
-        clipRule="evenodd"
-        d="M12.026 2c-5.509 0-9.974 4.465-9.974 9.974 0 4.406 2.857 8.145 6.821 9.465.499.09.679-.217.679-.481 0-.237-.008-.865-.011-1.696-2.775.602-3.361-1.338-3.361-1.338-.452-1.152-1.107-1.459-1.107-1.459-.905-.619.069-.605.069-.605 1.002.07 1.527 1.028 1.527 1.028.89 1.524 2.336 1.084 2.902.829.091-.645.351-1.085.635-1.334-2.214-.251-4.542-1.107-4.542-4.93 0-1.087.389-1.979 1.024-2.675-.101-.253-.446-1.268.099-2.64 0 0 .837-.269 2.742 1.021a9.582 9.582 0 0 1 2.496-.336 9.554 9.554 0 0 1 2.496.336c1.906-1.291 2.742-1.021 2.742-1.021.545 1.372.203 2.387.099 2.64.64.696 1.024 1.587 1.024 2.675 0 3.833-2.33 4.675-4.552 4.922.355.308.675.916.675 1.846 0 1.334-.012 2.41-.012 2.737 0 .267.178.577.687.479C19.146 20.115 22 16.379 22 11.974 22 6.465 17.535 2 12.026 2z"
+        d="M18.88 1.099Q17.78-.001 16.233 0H3.746Q2.198 0 1.099 1.099Q-.001 2.199 0 3.746v12.487q0 1.548 1.099 2.647q1.1 1.1 2.647 1.099H6.66q.285 0 .429-.02a.5.5 0 0 0 .286-.169q.143-.15.143-.435l-.007-.885q-.006-.846-.006-1.34l-.3.052q-.285.052-.721.046a5.6 5.6 0 0 1-.904-.091a2 2 0 0 1-.872-.39a1.65 1.65 0 0 1-.572-.8l-.13-.3a3.3 3.3 0 0 0-.41-.663q-.28-.364-.566-.494l-.09-.065a1 1 0 0 1-.17-.156a.7.7 0 0 1-.117-.182q-.039-.092.065-.15q.104-.06.378-.059l.26.04q.26.051.643.311a2.1 2.1 0 0 1 .631.677q.3.532.722.813q.423.28.852.28t.742-.065a2.6 2.6 0 0 0 .585-.196q.117-.871.637-1.34a9 9 0 0 1-1.333-.234a5.3 5.3 0 0 1-1.223-.507a3.5 3.5 0 0 1-1.047-.872q-.416-.52-.683-1.365q-.266-.846-.266-1.952q0-1.573 1.027-2.68q-.48-1.183.091-2.652q.378-.118 1.119.175t1.086.5q.345.21.553.352a9.2 9.2 0 0 1 2.497-.338q1.288 0 2.498.338l.494-.312a7 7 0 0 1 1.197-.572q.689-.26 1.054-.143q.585 1.47.103 2.653q1.028 1.105 1.028 2.68q0 1.106-.267 1.957q-.266.852-.689 1.366a3.7 3.7 0 0 1-1.053.865q-.63.351-1.223.507a9 9 0 0 1-1.333.235q.675.585.676 1.846v3.11q0 .22.065.357a.36.36 0 0 0 .208.189q.143.052.254.064q.111.014.318.013h2.914q1.548 0 2.647-1.099t1.099-2.647V3.746q0-1.548-1.1-2.647z"
         fill="currentColor"
-        fillRule="evenodd"
       />
     </svg>
   );
 };
 
-export const MoonFilledIcon = ({
+export const SpinnersBlocksShuffle3 = ({
   size = 24,
   width,
   height,
   ...props
-}: IconSvgProps) => (
-  <svg
-    aria-hidden="true"
-    focusable="false"
-    height={size || height}
-    role="presentation"
-    viewBox="0 0 24 24"
-    width={size || width}
-    {...props}
-  >
-    <path
-      d="M21.53 15.93c-.16-.27-.61-.69-1.73-.49a8.46 8.46 0 01-1.88.13 8.409 8.409 0 01-5.91-2.82 8.068 8.068 0 01-1.44-8.66c.44-1.01.13-1.54-.09-1.76s-.77-.55-1.83-.11a10.318 10.318 0 00-6.32 10.21 10.475 10.475 0 007.04 8.99 10 10 0 002.89.55c.16.01.32.02.48.02a10.5 10.5 0 008.47-4.27c.67-.93.49-1.519.32-1.79z"
-      fill="currentColor"
-    />
-  </svg>
-);
+}: IconSvgProps) => {
+  return (
+    <svg
+      height={size || height}
+      viewBox="0 0 24 24"
+      width={size || width}
+      {...props}
+    >
+      <rect fill="currentColor" height="10" rx="1" width="10" x="1" y="1">
+        <animate
+          attributeName="x"
+          begin="0;SVGo3aOUHlJ.end"
+          dur="0.2s"
+          fill="freeze"
+          id="SVG7WybndBt"
+          values="1;13"
+        />
+        <animate
+          attributeName="y"
+          begin="SVGFpk9ncYc.end"
+          dur="0.2s"
+          fill="freeze"
+          id="SVGVoKldbWM"
+          values="1;13"
+        />
+        <animate
+          attributeName="x"
+          begin="SVGaI8owdNK.end"
+          dur="0.2s"
+          fill="freeze"
+          id="SVGKsXgPbui"
+          values="13;1"
+        />
+        <animate
+          attributeName="y"
+          begin="SVG28A4To9L.end"
+          dur="0.2s"
+          fill="freeze"
+          id="SVG7JzAfdGT"
+          values="13;1"
+        />
+      </rect>
+      <rect fill="currentColor" height="10" rx="1" width="10" x="1" y="13">
+        <animate
+          attributeName="y"
+          begin="SVG7WybndBt.end"
+          dur="0.2s"
+          fill="freeze"
+          id="SVGUiS2jeZq"
+          values="13;1"
+        />
+        <animate
+          attributeName="x"
+          begin="SVGVoKldbWM.end"
+          dur="0.2s"
+          fill="freeze"
+          id="SVGU0vu2GEM"
+          values="1;13"
+        />
+        <animate
+          attributeName="y"
+          begin="SVGKsXgPbui.end"
+          dur="0.2s"
+          fill="freeze"
+          id="SVGOIboFeLf"
+          values="1;13"
+        />
+        <animate
+          attributeName="x"
+          begin="SVG7JzAfdGT.end"
+          dur="0.2s"
+          fill="freeze"
+          id="SVG14lAaeuv"
+          values="13;1"
+        />
+      </rect>
+      <rect fill="currentColor" height="10" rx="1" width="10" x="13" y="13">
+        <animate
+          attributeName="x"
+          begin="SVGUiS2jeZq.end"
+          dur="0.2s"
+          fill="freeze"
+          id="SVGFpk9ncYc"
+          values="13;1"
+        />
+        <animate
+          attributeName="y"
+          begin="SVGU0vu2GEM.end"
+          dur="0.2s"
+          fill="freeze"
+          id="SVGaI8owdNK"
+          values="13;1"
+        />
+        <animate
+          attributeName="x"
+          begin="SVGOIboFeLf.end"
+          dur="0.2s"
+          fill="freeze"
+          id="SVG28A4To9L"
+          values="1;13"
+        />
+        <animate
+          attributeName="y"
+          begin="SVG14lAaeuv.end"
+          dur="0.2s"
+          fill="freeze"
+          id="SVGo3aOUHlJ"
+          values="1;13"
+        />
+      </rect>
+    </svg>
+  );
+};

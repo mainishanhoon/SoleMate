@@ -1,6 +1,6 @@
 import { Product } from '@/types/product.ts';
 
-export const fetchProduct = async (id: string): Promise<Product> => {
+export async function fetchProduct(id: string): Promise<Product> {
   const res = await fetch(`http://localhost:8080/api/product/${id}`);
 
   if (!res.ok) {
@@ -8,9 +8,9 @@ export const fetchProduct = async (id: string): Promise<Product> => {
   }
 
   return res.json();
-};
+}
 
-export const fetchAllProducts = async (): Promise<Product[]> => {
+export async function fetchAllProducts(): Promise<Product[]> {
   const res = await fetch(`http://localhost:8080/api/product`);
 
   if (!res.ok) {
@@ -18,16 +18,16 @@ export const fetchAllProducts = async (): Promise<Product[]> => {
   }
 
   return res.json();
-};
+}
 
-export const searchProduct = async (value: string): Promise<Product[]> => {
+export async function searchProduct(value: string): Promise<Product[]> {
   const res = await fetch(
     `http://localhost:8080/api/product/search?keyword=${encodeURIComponent(value)}`
   );
 
   if (!res.ok) {
-    throw new Error('No Product Found');
+    throw new Error('Some Error Occurred on the Server');
   }
 
   return res.json();
-};
+}

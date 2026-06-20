@@ -12,7 +12,7 @@ import org.springframework.web.multipart.MultipartFile;
 import java.text.MessageFormat;
 import java.util.List;
 
-@CrossOrigin(origins = "http://localhost:5173")
+@CrossOrigin(origins = {"http://localhost:5173", "http://10.105.248.106:5173"})
 @RestController
 @RequestMapping("/api/product")
 public class ProductController {
@@ -31,7 +31,7 @@ public class ProductController {
         }
     }
 
-    @PostMapping(consumes = { MediaType.MULTIPART_FORM_DATA_VALUE })
+    @PostMapping(consumes = {MediaType.MULTIPART_FORM_DATA_VALUE})
     public ResponseEntity<String> addProduct(@RequestPart Product product, @RequestPart MultipartFile imageFile) {
         try {
             Product savedProduct = service.addProduct(product, imageFile);
@@ -68,10 +68,6 @@ public class ProductController {
         System.out.println("Searching: " + keyword);
         List<Product> products = service.findProducts(keyword);
 
-        if (products.isEmpty()) {
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
-        }
-
         return ResponseEntity.ok(products);
     }
 
@@ -88,7 +84,7 @@ public class ProductController {
         return ResponseEntity.ok().body(imageFile);
     }
 
-    @PutMapping(value = "/{id}", consumes = { MediaType.MULTIPART_FORM_DATA_VALUE })
+    @PutMapping(value = "/{id}", consumes = {MediaType.MULTIPART_FORM_DATA_VALUE})
     public ResponseEntity<String> updateProduct(@PathVariable int id, @RequestPart Product product, @RequestPart MultipartFile imageFile) {
         try {
             service.updateProduct(id, product, imageFile);
