@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="39b3821d-dfbc-40b6-8d59-5c43f43cbe35" name="Changes" comment="update: aesthetic changes and product dropdown component">
+      <change afterPath="$PROJECT_DIR$/frontend/.env.example" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/.env.local" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/app/components/errorPage.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/app/components/icons.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/app/components/navigationBar.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/app/components/productDropdown.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/app/components/searchInput.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/app/components/themeToggle.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/app/components/ui/badge.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/app/components/ui/button.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/app/components/ui/card.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/app/components/ui/select.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/app/components/uploadZone.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/app/hooks/useFileUpload.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/app/providers/ThemeProvider.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/app/routes/products/$id.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/app/routes/products/_index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/app/routes/products/_layout.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/app/routes/products/add.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/app/routes/products/search.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/app/schema/product.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/app/types/icon.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/app/types/product.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/project/solemate/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/project/solemate/controller/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/project/solemate/model/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/project/solemate/model/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/.npmrc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/.prettierrc" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.prettierrc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/.vscode/settings.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/bun.lock" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/bun.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/eslint.config.mjs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/postcss.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/logo.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/App.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/ProductCard.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/ProductDropdown.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/SearchInput.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/icons.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/navbar.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/primitives.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/theme-switch.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/config/site.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/layouts/root.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/main.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/docs.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/home.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/pricing.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/product/[id].tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/product/index.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/provider.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/service.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/styles/globals.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/types/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/types/product.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/vite-env.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/tsconfig.node.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/vercel.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/vite.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/vite.config.ts" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="JSX File" />
+        <option value="TypeScript File" />
+        <option value="TypeScript JSX File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;mainishanhoon&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/mainishanhoon/SoleMate.git&quot;,
+    &quot;accountId&quot;: &quot;f2708989-a9e6-43e0-868c-8093869f4e49&quot;
+  }
+}</component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/frontend/app/components/ui/card.tsx" root0="SKIP_INSPECTION" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="3F2bA60zaq2VKPnNPmfUx5HBh29" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
+    <option name="autoscrollToSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="openDirectoriesWithSingleClick" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_MARK_IGNORED_FILES_AS_EXCLUDED&quot;: &quot;true&quot;,
+    &quot;JavaScript Debug.localhost:5173.executor&quot;: &quot;Debug&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Java/Projects/SoleMate/frontend/app/routes&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;bun&quot;,
+    &quot;npm.dev.executor&quot;: &quot;Run&quot;,
+    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;D:\\Java\\Projects\\SoleMate\\frontend\\node_modules\\prettier&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.javascript.prettier&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;D:\\Java\\Projects\\SoleMate\\frontend\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
+    ]
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Java\Projects\SoleMate\frontend\app\routes" />
+      <recent name="D:\Java\Projects\SoleMate\frontend" />
+      <recent name="D:\Java\Projects\SoleMate\frontend\public" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Java\Projects\SoleMate\frontend\app\routes\products" />
+      <recent name="D:\Java\Projects\SoleMate\frontend\app\routes" />
+      <recent name="D:\Java\Projects\SoleMate\frontend\app\routes\product" />
+      <recent name="D:\Java\Projects\SoleMate\frontend\app" />
+      <recent name="D:\Java\Projects\SoleMate\frontend\app\providers" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JavaScript Debug.localhost:5173">
+    <configuration name="localhost:5173" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:5173/">
+      <method v="2" />
+    </configuration>
+    <configuration name="dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/frontend/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="dev" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.localhost:5173" />
+        <item itemvalue="npm.dev" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-3aa1da707db6-JavaScript-WS-252.27397.92" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="39b3821d-dfbc-40b6-8d59-5c43f43cbe35" name="Changes" comment="" />
+      <created>1781275985702</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1781275985702</updated>
+      <workItem from="1781275988023" duration="2298000" />
+      <workItem from="1781320044383" duration="2360000" />
+      <workItem from="1781322453461" duration="662000" />
+      <workItem from="1781323147756" duration="12224000" />
+      <workItem from="1781338043647" duration="10891000" />
+      <workItem from="1781618507453" duration="2503000" />
+      <workItem from="1781674040186" duration="2626000" />
+      <workItem from="1781679485253" duration="125000" />
+      <workItem from="1781694737277" duration="1100000" />
+      <workItem from="1781755108271" duration="10365000" />
+      <workItem from="1781854189301" duration="5619000" />
+      <workItem from="1781925679037" duration="26368000" />
+      <workItem from="1782038249207" duration="25838000" />
+      <workItem from="1782215495144" duration="3150000" />
+      <workItem from="1782266409890" duration="3265000" />
+      <workItem from="1782320970184" duration="17669000" />
+      <workItem from="1782367594589" duration="22688000" />
+      <workItem from="1782398358544" duration="3035000" />
+      <workItem from="1782401965186" duration="5482000" />
+      <workItem from="1782420674246" duration="4320000" />
+      <workItem from="1782457105635" duration="14287000" />
+      <workItem from="1782500979455" duration="3503000" />
+      <workItem from="1782534957429" duration="48976000" />
+      <workItem from="1782628836861" duration="10937000" />
+    </task>
+    <task id="LOCAL-00001" summary="Added tanstack for server side rendering">
+      <option name="closed" value="true" />
+      <created>1781341661855</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1781341661855</updated>
+    </task>
+    <task id="LOCAL-00002" summary="update: UI/UX">
+      <option name="closed" value="true" />
+      <created>1781624279295</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1781624279295</updated>
+    </task>
+    <task id="LOCAL-00003" summary="fix: NavBar, Controller, Service">
+      <option name="closed" value="true" />
+      <created>1781679544397</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1781679544398</updated>
+    </task>
+    <task id="LOCAL-00004" summary="update: H2-DataBase -&gt; PostgreSQL">
+      <option name="closed" value="true" />
+      <created>1781695830080</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1781695830080</updated>
+    </task>
+    <task id="LOCAL-00005" summary="feature: add search functionality for products">
+      <option name="closed" value="true" />
+      <created>1781765702705</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1781765702706</updated>
+    </task>
+    <task id="LOCAL-00006" summary="update: add chip and redirection">
+      <option name="closed" value="true" />
+      <created>1781862453483</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1781862453483</updated>
+    </task>
+    <task id="LOCAL-00007" summary="update: aesthetic changes and product dropdown component">
+      <option name="closed" value="true" />
+      <created>1781952378035</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1781952378035</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="components.json" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Added tanstack for server side rendering" />
+    <MESSAGE value="update: UI/UX" />
+    <MESSAGE value="fix: NavBar, Controller, Service" />
+    <MESSAGE value="update: H2-DataBase -&gt; PostgreSQL" />
+    <MESSAGE value="feature: add search functionality for products" />
+    <MESSAGE value="update: add chip and redirection" />
+    <MESSAGE value="update: aesthetic changes and product dropdown component" />
+    <option name="LAST_COMMIT_MESSAGE" value="update: aesthetic changes and product dropdown component" />
+  </component>
+</project>
