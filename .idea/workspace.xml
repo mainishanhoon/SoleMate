@@ -4,26 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="39b3821d-dfbc-40b6-8d59-5c43f43cbe35" name="Changes" comment="migrate: from vite + react -&gt; react router v7">
+    <list default="true" id="39b3821d-dfbc-40b6-8d59-5c43f43cbe35" name="Changes" comment="update: add hero section">
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/public/favicon.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/ShadcnHelperSettings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ShadcnHelperSettings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/project/solemate/SoleMateApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/project/solemate/SoleMateApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/project/solemate/model/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/project/solemate/model/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/resources/data.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/.env.example" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.env.example" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/app/components/icons.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/app/components/icons.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/app/components/navigationBar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/app/components/navigationBar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/app/components/productDropdown.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/app/components/productDropdown.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/app/components/searchInput.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/app/components/searchInput.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/app/components/themeToggle.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/app/components/themeToggle.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/app/components/uploadZone.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/app/components/uploadZone.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/app/hooks/useFileUpload.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/app/routes/_index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/app/routes/_index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/app/routes/products/$id.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/app/routes/products/$id.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/app/routes/products/_index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/app/routes/products/_index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/app/routes/products/_layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/app/routes/products/_layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/app/routes/products/add.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/app/routes/products/add.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/app/routes/products/search.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/app/routes/products/search.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/app/schema/product.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/app/schema/product.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/app/components/errorPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/app/components/errorPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/app/root.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/app/root.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/favicon.ico" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,39 +63,39 @@
     <option name="openDirectoriesWithSingleClick" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_MARK_IGNORED_FILES_AS_EXCLUDED&quot;: &quot;true&quot;,
-    &quot;JavaScript Debug.localhost:5173.executor&quot;: &quot;Debug&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
-    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Java/Projects/SoleMate/frontend/app/routes&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;bun&quot;,
-    &quot;npm.dev.executor&quot;: &quot;Run&quot;,
-    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;D:\\Java\\Projects\\SoleMate\\frontend\\node_modules\\prettier&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;settings.javascript.prettier&quot;,
-    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;D:\\Java\\Projects\\SoleMate\\frontend\\node_modules\\typescript\\lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_MARK_IGNORED_FILES_AS_EXCLUDED": "true",
+    "JavaScript Debug.localhost:5173.executor": "Debug",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "junie.onboarding.icon.badge.shown": "true",
+    "last_opened_file_path": "D:/Java/Projects/SoleMate/frontend/public",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "bun",
+    "npm.dev.executor": "Run",
+    "prettierjs.PrettierConfiguration.Package": "D:\\Java\\Projects\\SoleMate\\frontend\\node_modules\\prettier",
+    "settings.editor.selected.configurable": "settings.javascript.prettier",
+    "to.speed.mode.migration.done": "true",
+    "ts.external.directory.path": "D:\\Java\\Projects\\SoleMate\\frontend\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;postgresql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Java\Projects\SoleMate\frontend\public" />
       <recent name="D:\Java\Projects\SoleMate\frontend\app\routes" />
       <recent name="D:\Java\Projects\SoleMate\frontend" />
-      <recent name="D:\Java\Projects\SoleMate\frontend\public" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Java\Projects\SoleMate\frontend\app\routes\products" />
@@ -177,7 +165,8 @@
       <workItem from="1782534957429" duration="48976000" />
       <workItem from="1782628836861" duration="11274000" />
       <workItem from="1782670856113" duration="12060000" />
-      <workItem from="1782702562786" duration="26420000" />
+      <workItem from="1782702562786" duration="26662000" />
+      <workItem from="1782846094945" duration="4179000" />
     </task>
     <task id="LOCAL-00001" summary="Added tanstack for server side rendering">
       <option name="closed" value="true" />
@@ -243,7 +232,15 @@
       <option name="project" value="LOCAL" />
       <updated>1782663993303</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="update: add hero section">
+      <option name="closed" value="true" />
+      <created>1782841877265</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1782841877265</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -261,6 +258,7 @@
     <MESSAGE value="update: add chip and redirection" />
     <MESSAGE value="update: aesthetic changes and product dropdown component" />
     <MESSAGE value="migrate: from vite + react -&gt; react router v7" />
-    <option name="LAST_COMMIT_MESSAGE" value="migrate: from vite + react -&gt; react router v7" />
+    <MESSAGE value="update: add hero section" />
+    <option name="LAST_COMMIT_MESSAGE" value="update: add hero section" />
   </component>
 </project>

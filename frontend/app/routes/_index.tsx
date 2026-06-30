@@ -2,16 +2,6 @@ import type { Route } from '../+types/root';
 import { Link } from 'react-router';
 import { MdiGithubBox } from '@/components/icons';
 
-export function meta({}: Route.MetaArgs) {
-  return [
-    { title: 'SoleMate' },
-    {
-      name: 'description',
-      content: 'Find Your SoleMate & Walk With Confidence.',
-    },
-  ];
-}
-
 export default function HeroSection() {
   return (
     <section

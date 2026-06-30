@@ -51,8 +51,8 @@ function PillButton({ label, icon, href, onClick }: ErrorOneAction) {
 
   const content = (
     <>
-      <span>{label}</span>
       {icon}
+      <span>{label}</span>
     </>
   );
 
