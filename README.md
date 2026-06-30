@@ -1,17 +1,11 @@
 ### Hero
-<p align="center">
- <img src="https://github.com/mainishanhoon/SoleMate/blob/main/public/Hero.png" alt="Hero"/>
-</p>
+ <img src="https://github.com/mainishanhoon/SoleMate/blob/master/frontend/public/Hero.png" alt="Hero"/>
 
 ### Add Product Form
-<p align="center">
- <img src="https://github.com/mainishanhoon/SoleMate/blob/main/public/Add%202.0/Product%20Form.png" alt="Add Product Form"/>
-</p>
+ <img src="https://github.com/mainishanhoon/SoleMate/blob/master/frontend/public/Add%20Product%20Form.png" alt="Add Product Form"/>
 
 ### Products
-<p align="center">
- <img src="https://github.com/mainishanhoon/SoleMate/blob/main/public/Products.png" alt="Products"/>
-</p>
+ <img src="https://github.com/mainishanhoon/SoleMate/blob/master/frontend/public/Products.png" alt="Products"/>
 
 # 🈸 SoleMate - Backend
 
