@@ -4,15 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="39b3821d-dfbc-40b6-8d59-5c43f43cbe35" name="Changes" comment="update: add hero section">
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/public/favicon.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/ShadcnHelperSettings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ShadcnHelperSettings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/app/components/errorPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/app/components/errorPage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/app/root.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/app/root.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/favicon.ico" beforeDir="false" />
-    </list>
+    <list default="true" id="39b3821d-dfbc-40b6-8d59-5c43f43cbe35" name="Changes" comment="update: add README.md" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -166,7 +158,7 @@
       <workItem from="1782628836861" duration="11274000" />
       <workItem from="1782670856113" duration="12060000" />
       <workItem from="1782702562786" duration="26662000" />
-      <workItem from="1782846094945" duration="4179000" />
+      <workItem from="1782846094945" duration="4493000" />
     </task>
     <task id="LOCAL-00001" summary="Added tanstack for server side rendering">
       <option name="closed" value="true" />
@@ -240,7 +232,23 @@
       <option name="project" value="LOCAL" />
       <updated>1782841877265</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="update: add README.md">
+      <option name="closed" value="true" />
+      <created>1782850542637</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1782850542637</updated>
+    </task>
+    <task id="LOCAL-00011" summary="update: add README.md">
+      <option name="closed" value="true" />
+      <created>1782850564729</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1782850564729</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -259,6 +267,7 @@
     <MESSAGE value="update: aesthetic changes and product dropdown component" />
     <MESSAGE value="migrate: from vite + react -&gt; react router v7" />
     <MESSAGE value="update: add hero section" />
-    <option name="LAST_COMMIT_MESSAGE" value="update: add hero section" />
+    <MESSAGE value="update: add README.md" />
+    <option name="LAST_COMMIT_MESSAGE" value="update: add README.md" />
   </component>
 </project>
