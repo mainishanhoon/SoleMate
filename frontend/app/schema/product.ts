@@ -1,6 +1,7 @@
 import { z } from 'zod';
 
-const MAX_FILE_SIZE = 2 * 1024 * 1024; // 2MB
+const MAX_FILE_SIZE = 1024 * 1024;
+
 export const BRAND_OPTIONS = [
   'Adidas',
   'Puma',
@@ -8,6 +9,7 @@ export const BRAND_OPTIONS = [
   'One8',
   'Reebok',
 ] as const;
+
 export const CATEGORY_OPTIONS = [
   'Sneakers',
   'Running',
@@ -55,6 +57,6 @@ export const productSchema = z.object({
     .instanceof(File, { message: 'Image is required' })
     .refine(
       (file) => file.size <= MAX_FILE_SIZE,
-      'File is too large (max 2MB)',
+      'File is too large (max 1MB)',
     ),
 });

@@ -1,15 +1,22 @@
 import { useTheme } from 'next-themes';
-import { Button } from '@/components/ui/button';
+import {
+  LineMdSunnyFilledLoopToMoonFilledLoopTransition,
+  LineMdSunRisingTwoToneLoop,
+} from '@/components/icons';
 
 export function ThemeToggle() {
   const { setTheme, theme } = useTheme();
 
   return (
-    <Button
-      variant="outline"
+    <span
       onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
+      className="cursor-pointer"
     >
-      Toggle Theme
-    </Button>
+      {theme === 'dark' ? (
+        <LineMdSunRisingTwoToneLoop className="size-6" />
+      ) : (
+        <LineMdSunnyFilledLoopToMoonFilledLoopTransition className="size-6" />
+      )}
+    </span>
   );
 }

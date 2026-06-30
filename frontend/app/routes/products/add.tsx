@@ -3,6 +3,7 @@ import {
   Form,
   redirect,
   useActionData,
+  useNavigation,
 } from 'react-router';
 import { useForm } from '@conform-to/react';
 import { getZodConstraint, parseWithZod } from '@conform-to/zod';
@@ -43,11 +44,12 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from '@/components/ui/popover';
-import UploadZone from '@/components/uploadZone';
 import { useState } from 'react';
 import { format } from 'date-fns';
 import { Calendar } from '@/components/ui/calendar';
 import { cn } from '@/lib/utils';
+import UploadZone from '@/components/uploadZone';
+import { SvgSpinnersBarsRotateFade } from '@/components/icons';
 
 export async function action({ request }: ActionFunctionArgs) {
   const formData = await request.formData();
@@ -71,13 +73,10 @@ export async function action({ request }: ActionFunctionArgs) {
     apiFormData.append('imageFile', imageFile);
   }
 
-  const response = await fetch(
-    `${String(process.env.BASE_URL)}/api/product/add`,
-    {
-      method: 'POST',
-      body: apiFormData,
-    },
-  );
+  const response = await fetch(`${String(process.env.VITE_BASE_URL)}/add`, {
+    method: 'POST',
+    body: apiFormData,
+  });
 
   if (!response.ok) {
     return submission.reply({ formErrors: ['Failed to add product'] });
@@ -88,7 +87,9 @@ export async function action({ request }: ActionFunctionArgs) {
 
 export default function AddProduct() {
   const [date, setDate] = useState<Date>();
-  const [image, setImage] = useState<File>();
+  const [resetKey, setResetKey] = useState(0);
+  const navigation = useNavigation();
+  const isSubmitting = navigation.state === 'submitting';
 
   const lastResult = useActionData<typeof action>();
   const [form, fields] = useForm({
@@ -101,29 +102,34 @@ export default function AddProduct() {
     constraint: getZodConstraint(productSchema),
   });
 
+  const handleReset = () => {
+    setResetKey((prev) => prev + 1);
+  };
+
   return (
-    <section className="font-bricolage flex min-h-screen w-full items-center justify-center p-4 lg:p-8">
+    <section className="font-bricolage flex w-full items-center justify-center p-4 lg:p-8">
       <Card className="lg:w-7xl" corner={true}>
         <CardContent className="grid gap-6 lg:grid-cols-2">
-          <div className="flex flex-col gap-2">
+          <FieldGroup className="flex flex-col gap-2">
             <FieldLabel htmlFor={fields.imageData.id}>Image</FieldLabel>
             <UploadZone
-              formID={form.id}
-              key={fields.imageData.key}
-              id={fields.imageData.id}
-              name={fields.imageData.name}
-              className={fields.imageData.errors && 'ring-destructive ring'}
+              key={resetKey}
+              meta={fields.imageData}
+              className={
+                fields.imageData.errors && 'outline-destructive outline'
+              }
             />
             {fields.imageData.errors && (
               <FieldDescription className="text-destructive">
                 {fields.imageData.errors}
               </FieldDescription>
             )}
-          </div>
+          </FieldGroup>
           <Form
             method="post"
             id={form.id}
             onSubmit={form.onSubmit}
+            onReset={handleReset}
             encType="multipart/form-data"
             noValidate
           >
@@ -313,7 +319,13 @@ export default function AddProduct() {
                   Reset
                 </Button>
                 <Button type="submit" corner={true}>
-                  Submit
+                  {isSubmitting ? (
+                    <span className="flex gap-2">
+                      <SvgSpinnersBarsRotateFade /> Submitting...
+                    </span>
+                  ) : (
+                    'Submit'
+                  )}
                 </Button>
               </Field>
             </FieldGroup>

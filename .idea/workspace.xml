@@ -4,72 +4,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="39b3821d-dfbc-40b6-8d59-5c43f43cbe35" name="Changes" comment="update: aesthetic changes and product dropdown component">
-      <change afterPath="$PROJECT_DIR$/frontend/.env.example" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/.env.local" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/app/components/errorPage.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/app/components/icons.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/app/components/navigationBar.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/app/components/productDropdown.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/app/components/searchInput.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/app/components/themeToggle.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/app/components/ui/badge.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/app/components/ui/button.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/app/components/ui/card.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/app/components/ui/select.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/app/components/uploadZone.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/app/hooks/useFileUpload.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/app/providers/ThemeProvider.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/app/routes/products/$id.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/app/routes/products/_index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/app/routes/products/_layout.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/app/routes/products/add.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/app/routes/products/search.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/app/schema/product.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/app/types/icon.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/app/types/product.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/project/solemate/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/project/solemate/controller/ProductController.java" afterDir="false" />
+    <list default="true" id="39b3821d-dfbc-40b6-8d59-5c43f43cbe35" name="Changes" comment="migrate: from vite + react -&gt; react router v7">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/project/solemate/SoleMateApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/project/solemate/SoleMateApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/project/solemate/model/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/project/solemate/model/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/.npmrc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/.prettierrc" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.prettierrc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/.vscode/settings.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/bun.lock" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/bun.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/eslint.config.mjs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/postcss.config.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/logo.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/App.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/ProductCard.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/ProductDropdown.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/SearchInput.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/icons.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/navbar.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/primitives.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/theme-switch.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/config/site.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/layouts/root.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/main.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/docs.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/home.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/pricing.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/product/[id].tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/product/index.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/provider.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/service.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/styles/globals.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/types/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/types/product.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/vite-env.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/tsconfig.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/tsconfig.node.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/vercel.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/vite.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/vite.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/resources/data.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/.env.example" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.env.example" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/app/components/icons.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/app/components/icons.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/app/components/navigationBar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/app/components/navigationBar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/app/components/productDropdown.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/app/components/productDropdown.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/app/components/searchInput.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/app/components/searchInput.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/app/components/themeToggle.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/app/components/themeToggle.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/app/components/uploadZone.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/app/components/uploadZone.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/app/hooks/useFileUpload.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/app/routes/_index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/app/routes/_index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/app/routes/products/$id.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/app/routes/products/$id.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/app/routes/products/_index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/app/routes/products/_index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/app/routes/products/_layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/app/routes/products/_layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/app/routes/products/add.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/app/routes/products/add.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/app/routes/products/search.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/app/routes/products/search.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/app/schema/product.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/app/schema/product.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -221,7 +175,9 @@
       <workItem from="1782457105635" duration="14287000" />
       <workItem from="1782500979455" duration="3503000" />
       <workItem from="1782534957429" duration="48976000" />
-      <workItem from="1782628836861" duration="10937000" />
+      <workItem from="1782628836861" duration="11274000" />
+      <workItem from="1782670856113" duration="12060000" />
+      <workItem from="1782702562786" duration="26420000" />
     </task>
     <task id="LOCAL-00001" summary="Added tanstack for server side rendering">
       <option name="closed" value="true" />
@@ -279,7 +235,15 @@
       <option name="project" value="LOCAL" />
       <updated>1781952378035</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="migrate: from vite + react -&gt; react router v7">
+      <option name="closed" value="true" />
+      <created>1782663993303</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1782663993303</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -296,6 +260,7 @@
     <MESSAGE value="feature: add search functionality for products" />
     <MESSAGE value="update: add chip and redirection" />
     <MESSAGE value="update: aesthetic changes and product dropdown component" />
-    <option name="LAST_COMMIT_MESSAGE" value="update: aesthetic changes and product dropdown component" />
+    <MESSAGE value="migrate: from vite + react -&gt; react router v7" />
+    <option name="LAST_COMMIT_MESSAGE" value="migrate: from vite + react -&gt; react router v7" />
   </component>
 </project>

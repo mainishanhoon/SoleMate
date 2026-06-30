@@ -61,7 +61,7 @@ export default function SearchInput() {
           value={input}
           onChange={(e) => setInput(e.target.value)}
           onKeyDown={(e) => e.key === 'Enter' && handleSearch()}
-          className="bg-background placeholder:font-medium"
+          className="placeholder:font-medium"
         />
         <InputGroupAddon align="inline-start">
           <RoundedMagnifier size={20} />

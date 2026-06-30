@@ -1,4 +1,4 @@
-import { Link, type LoaderFunctionArgs, useLoaderData } from 'react-router';
+import { type LoaderFunctionArgs, useLoaderData } from 'react-router';
 import {
   Card,
   CardContent,
@@ -15,14 +15,13 @@ import type { Product } from '@/types/product';
 export async function loader({ params }: LoaderFunctionArgs) {
   const { id } = params;
 
-  const response = await fetch(`${String(process.env.BASE_URL)}/${id}`);
+  const response = await fetch(`${String(process.env.VITE_BASE_URL)}/${id}`);
 
   if (!response.ok) {
     throw new Response('Product not found', { status: 404 });
   }
 
   const product: Product = await response.json();
-
   return Response.json({ product });
 }
 
@@ -31,10 +30,14 @@ export default function ProductDetail() {
 
   return (
     <div className="flex min-h-dvh items-center justify-center">
-      <Card key={product.id} corner={true}>
+      <Card key={product.id} corner={true} className="min-w-sm">
         <img
           alt={'footwear'}
-          src={'https://images.unsplash.com/photo-1542291026-7eec264c27ff'}
+          src={`${import.meta.env.VITE_BASE_URL}/${product.id}/image`}
+          onError={(e) => {
+            e.currentTarget.src =
+              'https://images.unsplash.com/photo-1542291026-7eec264c27ff';
+          }}
           className="h-60 w-full object-cover"
           loading="lazy"
           draggable={false}
@@ -79,11 +82,9 @@ export default function ProductDetail() {
           <Button corner={true} variant="secondary">
             <CartCheck /> <span>Add to Cart</span>
           </Button>
-          <Link to={`${product.id}`}>
-            <Button corner={true}>
-              <EyeScan /> <span>Show Product</span>
-            </Button>
-          </Link>
+          <Button corner={true}>
+            <EyeScan /> <span>Show Product</span>
+          </Button>
         </CardFooter>
       </Card>
     </div>

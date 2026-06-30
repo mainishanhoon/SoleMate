@@ -8,9 +8,7 @@ interface ProductDropdownProps {
   data: Product[];
 }
 
-export default function ProductDropdown({
-  data,
-}: ProductDropdownProps) {
+export default function ProductDropdown({ data }: ProductDropdownProps) {
   return (
     <div className="absolute top-full z-50 mt-0.5 w-full overflow-hidden">
       <ScrollArea className="h-65 w-full">
@@ -26,12 +24,14 @@ export default function ProductDropdown({
                 <div className="flex-shrink-0">
                   <img
                     alt={product.imageName || product.name}
+                    src={`${import.meta.env.VITE_BASE_URL}/${product.id}/image`}
+                    onError={(e) => {
+                      e.currentTarget.src =
+                        'https://images.unsplash.com/photo-1542291026-7eec264c27ff';
+                    }}
                     className="ml-2 aspect-square size-28 object-cover"
                     loading="lazy"
-                    src={
-                      product.imageData ||
-                      'https://images.unsplash.com/photo-1542291026-7eec264c27ff'
-                    }
+                    draggable={false}
                   />
                 </div>
 

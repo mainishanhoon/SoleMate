@@ -13,10 +13,10 @@ import { CartCheck, EyeScan } from '@solar-icons/react-perf/BoldDuotone';
 import { Link, useLoaderData } from 'react-router';
 import type { Route } from '../../../.react-router/types/app/+types/root';
 
-async function loader({
+export async function loader({
   request,
 }: Route.LoaderArgs): Promise<{ data: Product[] }> {
-  const response = await fetch(`${String(process.env.BASE_URL)}`);
+  const response = await fetch(`${String(process.env.VITE_BASE_URL)}`);
   if (!response.ok) throw new Error('Failed to fetch');
 
   const products: Product[] = await response.json();
@@ -34,11 +34,15 @@ export default function ProductIndex() {
           <Card
             key={product.id}
             corner={true}
-            className="flex h-full flex-col gap-4 font-bricolage"
+            className="font-bricolage flex h-full flex-col gap-4"
           >
             <img
               alt={'shoe'}
-              src={'https://images.unsplash.com/photo-1542291026-7eec264c27ff'}
+              src={`${import.meta.env.VITE_BASE_URL}/${product.id}/image`}
+              onError={(e) => {
+                e.currentTarget.src =
+                  'https://images.unsplash.com/photo-1542291026-7eec264c27ff';
+              }}
               className="h-60 w-full object-cover"
               loading="lazy"
               draggable={false}
