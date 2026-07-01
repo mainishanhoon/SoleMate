@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="39b3821d-dfbc-40b6-8d59-5c43f43cbe35" name="Changes" comment="update: add images" />
+    <list default="true" id="39b3821d-dfbc-40b6-8d59-5c43f43cbe35" name="Changes" comment="update: add links">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -159,7 +161,8 @@
       <workItem from="1782628836861" duration="11274000" />
       <workItem from="1782670856113" duration="12060000" />
       <workItem from="1782702562786" duration="26662000" />
-      <workItem from="1782846094945" duration="4806000" />
+      <workItem from="1782846094945" duration="5122000" />
+      <workItem from="1782901412281" duration="595000" />
     </task>
     <task id="LOCAL-00001" summary="Added tanstack for server side rendering">
       <option name="closed" value="true" />
@@ -257,7 +260,15 @@
       <option name="project" value="LOCAL" />
       <updated>1782851016496</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="update: add links">
+      <option name="closed" value="true" />
+      <created>1782851313022</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1782851313022</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -278,6 +289,7 @@
     <MESSAGE value="update: add hero section" />
     <MESSAGE value="update: add README.md" />
     <MESSAGE value="update: add images" />
-    <option name="LAST_COMMIT_MESSAGE" value="update: add images" />
+    <MESSAGE value="update: add links" />
+    <option name="LAST_COMMIT_MESSAGE" value="update: add links" />
   </component>
 </project>
