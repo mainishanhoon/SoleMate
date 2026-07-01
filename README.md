@@ -29,7 +29,7 @@ All endpoints are prefixed with `/api/product`.
 *   **Language:** React & Java 21
 *   **Framework:** Spring Boot 4.0.6 & React Router
 *   **Database:** PostgreSQL
-*   **Data Handling:** Multipart/Form-Data for file uploads.
+*   **Form Handling:** CONFORM.
 
 ## ⚙️ Configuration
 The backend is configured to accept requests from your frontend development server:
