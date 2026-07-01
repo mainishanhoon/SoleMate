@@ -63,5 +63,6 @@ app/
 
 1. **Clone the repository:**
    ```bash
-   git clone [https://github.com/mainishanhoon/SoleMate.git](https://github.com/mainishanhoon/SoleMate.git)
+   git clone https://github.com/mainishanhoon/SoleMate.git
+   
    cd SoleMate
