@@ -4,8 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="39b3821d-dfbc-40b6-8d59-5c43f43cbe35" name="Changes" comment="update: add links">
+    <list default="true" id="39b3821d-dfbc-40b6-8d59-5c43f43cbe35" name="Changes" comment="update: fix command">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/backend/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/project/solemate/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/project/solemate/controller/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/application-dev.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/application-prod.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/application.example.properties" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -162,7 +167,9 @@
       <workItem from="1782670856113" duration="12060000" />
       <workItem from="1782702562786" duration="26662000" />
       <workItem from="1782846094945" duration="5122000" />
-      <workItem from="1782901412281" duration="595000" />
+      <workItem from="1782901412281" duration="1796000" />
+      <workItem from="1782929245675" duration="353000" />
+      <workItem from="1782970113119" duration="1537000" />
     </task>
     <task id="LOCAL-00001" summary="Added tanstack for server side rendering">
       <option name="closed" value="true" />
@@ -268,7 +275,31 @@
       <option name="project" value="LOCAL" />
       <updated>1782851313022</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="update: fix command">
+      <option name="closed" value="true" />
+      <created>1782902519246</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1782902519246</updated>
+    </task>
+    <task id="LOCAL-00015" summary="update: fix command">
+      <option name="closed" value="true" />
+      <created>1782902527520</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1782902527520</updated>
+    </task>
+    <task id="LOCAL-00016" summary="update: fix command">
+      <option name="closed" value="true" />
+      <created>1782924019956</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1782924019956</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -276,6 +307,17 @@
   </component>
   <component name="UnknownFeatures">
     <option featureType="com.intellij.fileTypeFactory" implementationName="components.json" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added tanstack for server side rendering" />
@@ -290,6 +332,7 @@
     <MESSAGE value="update: add README.md" />
     <MESSAGE value="update: add images" />
     <MESSAGE value="update: add links" />
-    <option name="LAST_COMMIT_MESSAGE" value="update: add links" />
+    <MESSAGE value="update: fix command" />
+    <option name="LAST_COMMIT_MESSAGE" value="update: fix command" />
   </component>
 </project>
