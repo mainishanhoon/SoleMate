@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="39b3821d-dfbc-40b6-8d59-5c43f43cbe35" name="Changes" comment="chore: add env files">
-      <change afterPath="$PROJECT_DIR$/backend/.dockerignore" afterDir="false" />
+    <list default="true" id="39b3821d-dfbc-40b6-8d59-5c43f43cbe35" name="Changes" comment="chore: add Dockerfile">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/backend/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/backend/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/mvnw.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/backend/mvnw.cmd" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -166,7 +166,7 @@
       <workItem from="1782846094945" duration="5122000" />
       <workItem from="1782901412281" duration="1796000" />
       <workItem from="1782929245675" duration="353000" />
-      <workItem from="1782970113119" duration="3834000" />
+      <workItem from="1782970113119" duration="4471000" />
     </task>
     <task id="LOCAL-00001" summary="Added tanstack for server side rendering">
       <option name="closed" value="true" />
@@ -312,7 +312,23 @@
       <option name="project" value="LOCAL" />
       <updated>1782971956308</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="chore: add Dockerfile">
+      <option name="closed" value="true" />
+      <created>1782988719463</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1782988719463</updated>
+    </task>
+    <task id="LOCAL-00020" summary="chore: add Dockerfile">
+      <option name="closed" value="true" />
+      <created>1782988748208</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1782988748208</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -348,6 +364,7 @@
     <MESSAGE value="update: fix command" />
     <MESSAGE value="chore: fix files for deployment" />
     <MESSAGE value="chore: add env files" />
-    <option name="LAST_COMMIT_MESSAGE" value="chore: add env files" />
+    <MESSAGE value="chore: add Dockerfile" />
+    <option name="LAST_COMMIT_MESSAGE" value="chore: add Dockerfile" />
   </component>
 </project>
