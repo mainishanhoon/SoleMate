@@ -5,8 +5,6 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
-@import "@fontsource-variable/inter";
-@import "@fontsource-variable/dm-sans";
 
 @custom-variant dark (&:is(.dark *));
 
@@ -25,7 +23,6 @@ body {
 }
 
 @theme inline {
-    --font-heading: 'DM Sans Variable', sans-serif;
     --font-mono: 'Google Sans Code', monospace;
     --color-sidebar-ring: var(--sidebar-ring);
     --color-sidebar-border: var(--sidebar-border);
