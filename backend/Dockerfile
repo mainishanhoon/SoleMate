@@ -2,8 +2,14 @@
 FROM eclipse-temurin:21-jdk-alpine AS build
 WORKDIR /workspace/app
 
-# Copy Maven wrapper and build configurations
+# Install dos2unix to ensure script compatibility
+RUN apk add --no-cache dos2unix
+
+# Copy Maven wrapper files and prepare them for execution
 COPY mvnw .
+RUN dos2unix mvnw && chmod +x mvnw
+
+# Copy the rest of the project
 COPY .mvn .mvn
 COPY pom.xml .
 COPY src src

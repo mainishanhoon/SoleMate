@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="39b3821d-dfbc-40b6-8d59-5c43f43cbe35" name="Changes" comment="chore: add Dockerfile">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/backend/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/mvnw.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/backend/mvnw.cmd" afterDir="false" />
-    </list>
+    <list default="true" id="39b3821d-dfbc-40b6-8d59-5c43f43cbe35" name="Changes" comment="chore: add mvnw" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -166,7 +162,7 @@
       <workItem from="1782846094945" duration="5122000" />
       <workItem from="1782901412281" duration="1796000" />
       <workItem from="1782929245675" duration="353000" />
-      <workItem from="1782970113119" duration="4471000" />
+      <workItem from="1782970113119" duration="4824000" />
     </task>
     <task id="LOCAL-00001" summary="Added tanstack for server side rendering">
       <option name="closed" value="true" />
@@ -328,7 +324,15 @@
       <option name="project" value="LOCAL" />
       <updated>1782988748208</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="chore: add mvnw">
+      <option name="closed" value="true" />
+      <created>1782989085761</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1782989085761</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -365,6 +369,7 @@
     <MESSAGE value="chore: fix files for deployment" />
     <MESSAGE value="chore: add env files" />
     <MESSAGE value="chore: add Dockerfile" />
-    <option name="LAST_COMMIT_MESSAGE" value="chore: add Dockerfile" />
+    <MESSAGE value="chore: add mvnw" />
+    <option name="LAST_COMMIT_MESSAGE" value="chore: add mvnw" />
   </component>
 </project>
