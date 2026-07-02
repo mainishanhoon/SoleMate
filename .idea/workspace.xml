@@ -4,13 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="39b3821d-dfbc-40b6-8d59-5c43f43cbe35" name="Changes" comment="update: fix command">
+    <list default="true" id="39b3821d-dfbc-40b6-8d59-5c43f43cbe35" name="Changes" comment="chore: add env files">
+      <change afterPath="$PROJECT_DIR$/backend/.dockerignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/backend/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/project/solemate/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/project/solemate/controller/ProductController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/application-dev.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/application-prod.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/application.example.properties" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -169,7 +166,7 @@
       <workItem from="1782846094945" duration="5122000" />
       <workItem from="1782901412281" duration="1796000" />
       <workItem from="1782929245675" duration="353000" />
-      <workItem from="1782970113119" duration="1537000" />
+      <workItem from="1782970113119" duration="3834000" />
     </task>
     <task id="LOCAL-00001" summary="Added tanstack for server side rendering">
       <option name="closed" value="true" />
@@ -299,7 +296,23 @@
       <option name="project" value="LOCAL" />
       <updated>1782924019956</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="chore: fix files for deployment">
+      <option name="closed" value="true" />
+      <created>1782971751411</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1782971751411</updated>
+    </task>
+    <task id="LOCAL-00018" summary="chore: add env files">
+      <option name="closed" value="true" />
+      <created>1782971956308</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1782971956308</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -333,6 +346,8 @@
     <MESSAGE value="update: add images" />
     <MESSAGE value="update: add links" />
     <MESSAGE value="update: fix command" />
-    <option name="LAST_COMMIT_MESSAGE" value="update: fix command" />
+    <MESSAGE value="chore: fix files for deployment" />
+    <MESSAGE value="chore: add env files" />
+    <option name="LAST_COMMIT_MESSAGE" value="chore: add env files" />
   </component>
 </project>
