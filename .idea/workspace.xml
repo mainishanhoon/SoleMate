@@ -4,16 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="39b3821d-dfbc-40b6-8d59-5c43f43cbe35" name="Changes" comment="fix: add bunx to scripts">
-      <change beforePath="$PROJECT_DIR$/.idea/ShadcnHelperSettings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ShadcnHelperSettings.xml" afterDir="false" />
+    <list default="true" id="39b3821d-dfbc-40b6-8d59-5c43f43cbe35" name="Changes" comment="config: vercel monorepo">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/.dockerignore" beforeDir="false" afterPath="$PROJECT_DIR$/vercel.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Dockerfile.vercel" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/project/solemate/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/project/solemate/controller/ProductController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/.dockerignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/Dockerfile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/.env.example" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/app/components/productDropdown.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/app/components/productDropdown.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/app/routes/_index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/app/routes/_index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/app/routes/products/$id.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/app/routes/products/$id.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/app/routes/products/_index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/app/routes/products/_index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/app/routes/products/add.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/app/routes/products/add.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/app/routes/products/search.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/app/routes/products/search.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/bun.lock" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/bun.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -173,7 +174,7 @@
       <workItem from="1782901412281" duration="1796000" />
       <workItem from="1782929245675" duration="353000" />
       <workItem from="1782970113119" duration="10506000" />
-      <workItem from="1783069547925" duration="4635000" />
+      <workItem from="1783069547925" duration="5934000" />
     </task>
     <task id="LOCAL-00001" summary="Added tanstack for server side rendering">
       <option name="closed" value="true" />
@@ -359,7 +360,15 @@
       <option name="project" value="LOCAL" />
       <updated>1782993677382</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="config: vercel monorepo">
+      <option name="closed" value="true" />
+      <created>1783077751350</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1783077751350</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -399,6 +408,7 @@
     <MESSAGE value="chore: add mvnw" />
     <MESSAGE value="fix: add +x to mvnw" />
     <MESSAGE value="fix: add bunx to scripts" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: add bunx to scripts" />
+    <MESSAGE value="config: vercel monorepo" />
+    <option name="LAST_COMMIT_MESSAGE" value="config: vercel monorepo" />
   </component>
 </project>

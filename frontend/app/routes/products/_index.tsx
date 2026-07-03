@@ -14,9 +14,9 @@ import { Link, useLoaderData } from 'react-router';
 import type { Route } from '../../../.react-router/types/app/+types/root';
 
 export async function loader({
-  request,
+  request: _request,
 }: Route.LoaderArgs): Promise<{ data: Product[] }> {
-  const response = await fetch(`${String(process.env.VITE_BASE_URL)}`);
+  const response = await fetch('/api/product');
   if (!response.ok) throw new Error('Failed to fetch');
 
   const products: Product[] = await response.json();
@@ -38,7 +38,7 @@ export default function ProductIndex() {
           >
             <img
               alt={'shoe'}
-              src={`${import.meta.env.VITE_BASE_URL}/${product.id}/image`}
+              src={`/api/product/${product.id}/image`}
               onError={(e) => {
                 e.currentTarget.src =
                   'https://images.unsplash.com/photo-1542291026-7eec264c27ff';

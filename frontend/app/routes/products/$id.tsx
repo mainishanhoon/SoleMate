@@ -15,7 +15,7 @@ import type { Product } from '@/types/product';
 export async function loader({ params }: LoaderFunctionArgs) {
   const { id } = params;
 
-  const response = await fetch(`${String(process.env.VITE_BASE_URL)}/${id}`);
+  const response = await fetch(`/api/product/${id}`);
 
   if (!response.ok) {
     throw new Response('Product not found', { status: 404 });
@@ -33,7 +33,7 @@ export default function ProductDetail() {
       <Card key={product.id} corner={true} className="min-w-sm">
         <img
           alt={'footwear'}
-          src={`${import.meta.env.VITE_BASE_URL}/${product.id}/image`}
+          src={`/api/product/${product.id}/image`}
           onError={(e) => {
             e.currentTarget.src =
               'https://images.unsplash.com/photo-1542291026-7eec264c27ff';

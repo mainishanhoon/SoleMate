@@ -73,7 +73,7 @@ export async function action({ request }: ActionFunctionArgs) {
     apiFormData.append('imageFile', imageFile);
   }
 
-  const response = await fetch(`${String(process.env.VITE_BASE_URL)}/add`, {
+  const response = await fetch('/api/product/add', {
     method: 'POST',
     body: apiFormData,
   });

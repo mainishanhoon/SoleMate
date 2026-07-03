@@ -1,4 +1,3 @@
-import type { Route } from '../+types/root';
 import { Link } from 'react-router';
 import { MdiGithubBox } from '@/components/icons';
 
