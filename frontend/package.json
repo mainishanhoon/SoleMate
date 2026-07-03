@@ -3,10 +3,10 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "bunx react-router build",
-    "dev": "bunx react-router dev --host",
-    "start": "bunx react-router-serve ./build/server/index.js",
-    "typecheck": "bunx react-router typegen && tsc"
+    "build": "react-router build",
+    "dev": "react-router dev --host",
+    "start": "react-router-serve ./build/server/index.js",
+    "typecheck": "react-router typegen && tsc"
   },
   "dependencies": {
     "@base-ui/react": "^1.6.0",

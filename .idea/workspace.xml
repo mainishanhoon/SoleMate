@@ -4,9 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="39b3821d-dfbc-40b6-8d59-5c43f43cbe35" name="Changes" comment="fix: add +x to mvnw">
+    <list default="true" id="39b3821d-dfbc-40b6-8d59-5c43f43cbe35" name="Changes" comment="fix: add bunx to scripts">
+      <change beforePath="$PROJECT_DIR$/.idea/ShadcnHelperSettings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ShadcnHelperSettings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/app/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/app/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/.dockerignore" beforeDir="false" afterPath="$PROJECT_DIR$/vercel.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Dockerfile.vercel" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/project/solemate/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/project/solemate/controller/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/.dockerignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/Dockerfile" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -166,7 +172,8 @@
       <workItem from="1782846094945" duration="5122000" />
       <workItem from="1782901412281" duration="1796000" />
       <workItem from="1782929245675" duration="353000" />
-      <workItem from="1782970113119" duration="7458000" />
+      <workItem from="1782970113119" duration="10506000" />
+      <workItem from="1783069547925" duration="4635000" />
     </task>
     <task id="LOCAL-00001" summary="Added tanstack for server side rendering">
       <option name="closed" value="true" />
@@ -344,7 +351,15 @@
       <option name="project" value="LOCAL" />
       <updated>1782989527365</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="fix: add bunx to scripts">
+      <option name="closed" value="true" />
+      <created>1782993677382</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1782993677382</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -383,6 +398,7 @@
     <MESSAGE value="chore: add Dockerfile" />
     <MESSAGE value="chore: add mvnw" />
     <MESSAGE value="fix: add +x to mvnw" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: add +x to mvnw" />
+    <MESSAGE value="fix: add bunx to scripts" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: add bunx to scripts" />
   </component>
 </project>

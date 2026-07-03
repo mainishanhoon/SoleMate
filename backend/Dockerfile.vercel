@@ -32,4 +32,4 @@ COPY --from=build /workspace/app/target/SoleMate-0.0.1-SNAPSHOT.jar app.jar
 EXPOSE 8080
 
 # Execute with Java 21 preview features enabled
-ENTRYPOINT ["java", "--enable-preview", "-jar", "app.jar"]
+ENTRYPOINT ["sh", "-c", "java --enable-preview -jar app.jar --server.port=${PORT:-8080}"]
