@@ -11,11 +11,12 @@ import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { CartCheck, EyeScan } from '@solar-icons/react-perf/BoldDuotone';
 import type { Product } from '@/types/product';
+import { smartFetch } from '@/api';
 
 export async function loader({ params }: LoaderFunctionArgs) {
   const { id } = params;
 
-  const response = await fetch(`/api/product/${id}`);
+  const response = await smartFetch(`/api/product/${id}`);
 
   if (!response.ok) {
     throw new Response('Product not found', { status: 404 });

@@ -12,11 +12,12 @@ import { Badge } from '@/components/ui/badge';
 import { CartCheck, EyeScan } from '@solar-icons/react-perf/BoldDuotone';
 import { Link, useLoaderData } from 'react-router';
 import type { Route } from '../../../.react-router/types/app/+types/root';
+import { smartFetch } from '@/api';
 
 export async function loader({
   request: _request,
 }: Route.LoaderArgs): Promise<{ data: Product[] }> {
-  const response = await fetch('/api/product');
+  const response = await smartFetch('/api/product');
   if (!response.ok) throw new Error('Failed to fetch');
 
   const products: Product[] = await response.json();
