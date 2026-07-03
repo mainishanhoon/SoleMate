@@ -11,30 +11,32 @@ import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { CartCheck, EyeScan } from '@solar-icons/react-perf/BoldDuotone';
 import type { Product } from '@/types/product';
-import { smartFetch } from '@/api';
 
 export async function loader({ params }: LoaderFunctionArgs) {
   const { id } = params;
 
-  const response = await smartFetch(`/api/product/${id}`);
+  const response = await fetch(`${process.env.BASE_URL}/api/product/${id}`);
 
   if (!response.ok) {
     throw new Response('Product not found', { status: 404 });
   }
 
   const product: Product = await response.json();
-  return Response.json({ product });
+
+  const imageSrc = `${process.env.VITE_BASE_URL}/api/product/${product.id}/image`;
+
+  return Response.json({ product, imageSrc });
 }
 
 export default function ProductDetail() {
-  const { product } = useLoaderData();
+  const { product, imageSrc } = useLoaderData();
 
   return (
     <div className="flex min-h-dvh items-center justify-center">
       <Card key={product.id} corner={true} className="min-w-sm">
         <img
           alt={'footwear'}
-          src={`/api/product/${product.id}/image`}
+          src={imageSrc}
           onError={(e) => {
             e.currentTarget.src =
               'https://images.unsplash.com/photo-1542291026-7eec264c27ff';

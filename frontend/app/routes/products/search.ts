@@ -1,6 +1,5 @@
 import { type LoaderFunctionArgs } from 'react-router';
 import type { Product } from '@/types/product';
-import { smartFetch } from '@/api';
 
 export interface SearchData {
   products?: Product[];
@@ -14,8 +13,8 @@ export async function loader({ request }: LoaderFunctionArgs) {
   const keyword = url.searchParams.get('keyword') || '';
 
   try {
-    const response = await smartFetch(
-      `/api/product/search?keyword=${encodeURIComponent(keyword)}`,
+    const response = await fetch(
+      `${process.env.BASE_URL}/api/product/search?keyword=${encodeURIComponent(keyword)}`,
     );
 
     if (!response.ok) {

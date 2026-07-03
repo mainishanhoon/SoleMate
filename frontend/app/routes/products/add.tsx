@@ -50,7 +50,6 @@ import { Calendar } from '@/components/ui/calendar';
 import { cn } from '@/lib/utils';
 import UploadZone from '@/components/uploadZone';
 import { SvgSpinnersBarsRotateFade } from '@/components/icons';
-import { smartFetch } from '@/api';
 
 export async function action({ request }: ActionFunctionArgs) {
   const formData = await request.formData();
@@ -74,7 +73,7 @@ export async function action({ request }: ActionFunctionArgs) {
     apiFormData.append('imageFile', imageFile);
   }
 
-  const response = await smartFetch('/api/product/add', {
+  const response = await fetch(`${process.env.VITE_BASE_URL}/api/product/add`, {
     method: 'POST',
     body: apiFormData,
   });

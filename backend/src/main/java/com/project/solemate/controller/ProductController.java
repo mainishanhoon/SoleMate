@@ -12,7 +12,7 @@ import org.springframework.web.multipart.MultipartFile;
 import java.text.MessageFormat;
 import java.util.List;
 
-// @CrossOrigin(origins = "${allowed.origin.url}")
+@CrossOrigin(origins = "${allowed.origin.url}")
 @RestController
 @RequestMapping("/api/product")
 public class ProductController {
