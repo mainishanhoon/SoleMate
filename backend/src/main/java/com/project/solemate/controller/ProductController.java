@@ -19,11 +19,7 @@ public class ProductController {
 
     @Autowired
     private ProductService service;
-
-    public String status(){
-        return "Connected to Server : ${allowed.origin.url}";
-    }
-
+    
     @GetMapping("/{id}")
     public ResponseEntity<Product> getProductById(@PathVariable("id") int id) {
         Product product = service.fetchProductsById(id);
