@@ -12,11 +12,14 @@ import { Badge } from '@/components/ui/badge';
 import { CartCheck, EyeScan } from '@solar-icons/react-perf/BoldDuotone';
 import { Link, useLoaderData } from 'react-router';
 import type { Route } from '../../../.react-router/types/app/+types/root';
+import ChatBot from '@/components/chatBot';
+import { toast } from 'sonner';
+import { useCart } from '@/providers/CartProvider';
 
 export async function loader({
   request: _request,
 }: Route.LoaderArgs): Promise<{ data: Product[] }> {
-  const response = await fetch(`${process.env.BASE_URL}/api/product`);
+  const response = await fetch(`${process.env.VITE_BASE_URL}/api/product`);
   if (!response.ok) throw new Error('Failed to fetch');
 
   const products: Product[] = await response.json();
@@ -25,9 +28,11 @@ export async function loader({
 
 export default function ProductIndex() {
   const { data } = useLoaderData();
+  const { addToCart } = useCart();
 
   return (
-    <section className="p-8">
+    <section className="p-4">
+      <ChatBot />
       <h1 className="mb-6 text-2xl font-bold">Our Products</h1>
       <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
         {data.map((product: Product) => (
@@ -87,10 +92,29 @@ export default function ProductIndex() {
               pattern={true}
               className="mt-auto flex justify-between p-0"
             >
-              <Button corner={true} variant="secondary">
+              <Button
+                onClick={() => {
+                  const addToCartPromise = () =>
+                    new Promise((resolve) => {
+                      setTimeout(() => {
+                        addToCart(product);
+                        resolve({ name: product.name });
+                      }, 600);
+                    });
+
+                  toast.promise(addToCartPromise, {
+                    loading: 'Adding item to cart...',
+                    success: (data: any) =>
+                      `${data.name} added to your cart successfully!`,
+                    error: 'Failed to add item. Please try again.',
+                  });
+                }}
+                corner={true}
+                variant="secondary"
+              >
                 <CartCheck /> <span>Add to Cart</span>
               </Button>
-              <Link to={`${product.id}`}>
+              <Link to={String(product.id)}>
                 <Button corner={true}>
                   <EyeScan /> <span>Show Product</span>
                 </Button>

@@ -9,5 +9,4 @@ public class SoleMateApplication {
     public static void main(String[] args) {
         SpringApplication.run(SoleMateApplication.class, args);
     }
-
 }

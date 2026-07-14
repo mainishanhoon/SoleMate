@@ -2,6 +2,7 @@ import { Link, useLocation } from 'react-router';
 import SearchInput from '@/components/searchInput';
 import { FaceScanSquare } from '@solar-icons/react-perf/BoldDuotone';
 import { ThemeToggle } from '@/components/themeToggle';
+import CartDrawer from '@/components/cart';
 
 export default function NavBar() {
   const route = useLocation();
@@ -23,7 +24,7 @@ export default function NavBar() {
         <div className="flex items-center gap-6">
           {route.pathname !== '/products' ? (
             <Link
-              to="/products"
+              to={{ pathname: '/products' }}
               className="hover:text-muted-foreground text-sm font-medium transition-colors"
             >
               Products
@@ -37,6 +38,7 @@ export default function NavBar() {
             </Link>
           )}
 
+          <CartDrawer />
           <ThemeToggle />
         </div>
       </div>

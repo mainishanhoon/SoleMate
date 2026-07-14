@@ -6,7 +6,8 @@ export default [
   layout('./routes/products/_layout.tsx', [
     route('products', './routes/products/_index.tsx'),
     route('products/search', './routes/products/search.ts'),
-    route('products/:id', './routes/products/$id.tsx'),
+    route('products/chat', './routes/products/chat.ts'),
     route('products/add', './routes/products/add.tsx'),
+    route('products/:id', './routes/products/$id.tsx'),
   ]),
 ] satisfies RouteConfig;

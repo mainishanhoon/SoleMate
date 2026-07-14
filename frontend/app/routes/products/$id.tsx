@@ -7,7 +7,9 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card';
+import { useCart } from '@/providers/CartProvider';
 import { Badge } from '@/components/ui/badge';
+import { toast } from 'sonner';
 import { Button } from '@/components/ui/button';
 import { CartCheck, EyeScan } from '@solar-icons/react-perf/BoldDuotone';
 import type { Product } from '@/types/product';
@@ -15,7 +17,9 @@ import type { Product } from '@/types/product';
 export async function loader({ params }: LoaderFunctionArgs) {
   const { id } = params;
 
-  const response = await fetch(`${process.env.BASE_URL}/api/product/${id}`);
+  const response = await fetch(
+    `${process.env.VITE_BASE_URL}/api/product/${id}`,
+  );
 
   if (!response.ok) {
     throw new Response('Product not found', { status: 404 });
@@ -30,6 +34,7 @@ export async function loader({ params }: LoaderFunctionArgs) {
 
 export default function ProductDetail() {
   const { product, imageSrc } = useLoaderData();
+  const { addToCart } = useCart();
 
   return (
     <div className="flex min-h-dvh items-center justify-center">
@@ -82,7 +87,27 @@ export default function ProductDetail() {
         </CardContent>
 
         <CardFooter pattern={true} className="flex justify-between">
-          <Button corner={true} variant="secondary">
+          <Button
+            onClick={() => {
+              const addToCartPromise = () =>
+                new Promise((resolve) => {
+                  setTimeout(() => {
+                    addToCart(product);
+                    resolve({ name: product.name });
+                  }, 600);
+                });
+
+              toast.promise(addToCartPromise, {
+                loading: 'Adding item to cart...',
+                success: (data: any) =>
+                  `${data.name} added to your cart successfully!`,
+                error: 'Failed to add item. Please try again.',
+              });
+            }}
+
+            corner={true}
+            variant="secondary"
+          >
             <CartCheck /> <span>Add to Cart</span>
           </Button>
           <Button corner={true}>

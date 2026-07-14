@@ -29,7 +29,7 @@ export default function HeroSection() {
 
       <div className="mt-8 flex justify-center">
         <Link
-          to="/products"
+          to={{ pathname: '/products' }}
           className="bg-foreground text-accent cursor-pointer rounded-lg px-2 py-1 font-bold transition-transform hover:scale-105"
         >
           Find Your Match !!
