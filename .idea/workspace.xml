@@ -4,16 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="39b3821d-dfbc-40b6-8d59-5c43f43cbe35" name="Changes" comment="fix: BASE_URL">
+    <list default="true" id="39b3821d-dfbc-40b6-8d59-5c43f43cbe35" name="Changes" comment="fix: Environment Variables">
+      <change afterPath="$PROJECT_DIR$/frontend/public/placeholder.webp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/app/components/productDropdown.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/app/components/productDropdown.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/app/lib/baseUrl.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/app/routes/products/$id.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/app/routes/products/$id.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/app/routes/products/_index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/app/routes/products/_index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/app/routes/products/add.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/app/routes/products/add.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/app/routes/products/chat.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/app/routes/products/chat.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/app/routes/products/search.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/app/routes/products/search.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/render.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/render.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -175,7 +169,7 @@
       <workItem from="1782970113119" duration="10506000" />
       <workItem from="1783069547925" duration="18023000" />
       <workItem from="1783976591750" duration="23958000" />
-      <workItem from="1784034068850" duration="36545000" />
+      <workItem from="1784034068850" duration="38944000" />
     </task>
     <task id="LOCAL-00001" summary="Added tanstack for server side rendering">
       <option name="closed" value="true" />
@@ -449,7 +443,15 @@
       <option name="project" value="LOCAL" />
       <updated>1784119434775</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="fix: Environment Variables">
+      <option name="closed" value="true" />
+      <created>1784122429689</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1784122429689</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -470,7 +472,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="update: add chip and redirection" />
     <MESSAGE value="update: aesthetic changes and product dropdown component" />
     <MESSAGE value="migrate: from vite + react -&gt; react router v7" />
     <MESSAGE value="update: add hero section" />
@@ -495,6 +496,7 @@
     <MESSAGE value="fix: remove buildFilters" />
     <MESSAGE value="fix: dynamic .env" />
     <MESSAGE value="fix: BASE_URL" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: BASE_URL" />
+    <MESSAGE value="fix: Environment Variables" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: Environment Variables" />
   </component>
 </project>

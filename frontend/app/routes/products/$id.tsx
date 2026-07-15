@@ -1,5 +1,12 @@
 import { type LoaderFunctionArgs, useLoaderData } from 'react-router';
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from '@/components/ui/card';
 import { useCart } from '@/providers/CartProvider';
 import { Badge } from '@/components/ui/badge';
 import { toast } from 'sonner';
@@ -10,7 +17,9 @@ import type { Product } from '@/types/product';
 export async function loader({ params }: LoaderFunctionArgs) {
   const { id } = params;
 
-  const response = await fetch(`${process.env.VITE_BACKEND_URL}/api/product/${id}`);
+  const response = await fetch(
+    `${process.env.VITE_BACKEND_URL}/api/product/${id}`,
+  );
 
   if (!response.ok) {
     throw new Response('Product not found', { status: 404 });
@@ -34,8 +43,7 @@ export default function ProductDetail() {
           alt={'footwear'}
           src={imageSrc}
           onError={(e) => {
-            e.currentTarget.src =
-              'https://images.unsplash.com/photo-1542291026-7eec264c27ff';
+            e.currentTarget.src = '/placeholder.webp';
           }}
           className="h-60 w-full object-cover"
           loading="lazy"

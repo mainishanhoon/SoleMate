@@ -42,13 +42,12 @@ export default function ProductIndex() {
             className="font-bricolage flex h-full flex-col gap-4"
           >
             <img
-              alt={'shoe'}
+              alt={product.name}
               src={`${import.meta.env.VITE_BACKEND_URL}/api/product/${product.id}/image`}
               onError={(e) => {
-                e.currentTarget.src =
-                  'https://images.unsplash.com/photo-1542291026-7eec264c27ff';
+                e.currentTarget.src = '/placeholder.webp';
               }}
-              className="h-60 w-full object-cover"
+              className="h-60 w-full border-b-2 border-dashed object-cover"
               loading="lazy"
               draggable={false}
             />

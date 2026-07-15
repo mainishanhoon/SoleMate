@@ -26,8 +26,7 @@ export default function ProductDropdown({ data }: ProductDropdownProps) {
                     alt={product.imageName || product.name}
                     src={`${import.meta.env.VITE_BACKEND_URL}/api/product/${product.id}/image`}
                     onError={(e) => {
-                      e.currentTarget.src =
-                        'https://images.unsplash.com/photo-1542291026-7eec264c27ff';
+                      e.currentTarget.src = '/placeholder.webp';
                     }}
                     className="ml-2 aspect-square size-28 object-cover"
                     loading="lazy"
