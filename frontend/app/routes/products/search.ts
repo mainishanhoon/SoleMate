@@ -1,6 +1,5 @@
 import { type LoaderFunctionArgs } from 'react-router';
 import type { Product } from '@/types/product';
-import { BASE_URL } from '@/lib/baseUrl';
 
 export interface SearchData {
   products?: Product[];
@@ -15,7 +14,7 @@ export async function loader({ request }: LoaderFunctionArgs) {
 
   try {
     const response = await fetch(
-      `${BASE_URL}/api/product/search?keyword=${encodeURIComponent(keyword)}`,
+      `${process.env.VITE_BACKEND_URL}/api/product/search?keyword=${encodeURIComponent(keyword)}`,
     );
 
     if (!response.ok) {

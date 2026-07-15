@@ -11,10 +11,7 @@ services:
         value: "8080"
 
       - key: SPRING_BASE_URL
-        fromService:
-          type: web
-          name: solemate-frontend
-          property: host
+        sync: false
 
       - key: DATABASE_URL
         sync: false
@@ -48,10 +45,7 @@ services:
         value: "1.1.0"
 
       - key: VITE_BACKEND_URL
-        fromService:
-          type: web
-          name: solemate-backend
-          property: host
+        sync: false
 
     buildFilter:
       paths:

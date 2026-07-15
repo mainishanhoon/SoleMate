@@ -3,7 +3,6 @@ import { Badge } from '@/components/ui/badge';
 import { ScrollArea } from '@/components/ui/scroll-area';
 
 import { type Product } from '@/types/product';
-import { BASE_URL } from '@/lib/baseUrl';
 
 interface ProductDropdownProps {
   data: Product[];
@@ -25,7 +24,7 @@ export default function ProductDropdown({ data }: ProductDropdownProps) {
                 <div className="flex-shrink-0">
                   <img
                     alt={product.imageName || product.name}
-                    src={`${BASE_URL}/api/product/${product.id}/image`}
+                    src={`${import.meta.env.VITE_BACKEND_URL}/api/product/${product.id}/image`}
                     onError={(e) => {
                       e.currentTarget.src =
                         'https://images.unsplash.com/photo-1542291026-7eec264c27ff';
