@@ -68,14 +68,12 @@ export default function ChatBot() {
     const trimmed = input.trim();
     if (!trimmed || isSubmitting) return;
 
-    // 1. User message instantly screen par
     setMessages((prev) => [
       ...prev,
       { id: `user-${Date.now()}`, text: trimmed, role: 'user' },
     ]);
     setInput('');
 
-    // 2. Pure Form data generate kiya
     const formData = new FormData();
     formData.append('message', trimmed);
 
@@ -131,7 +129,9 @@ export default function ChatBot() {
                         <Message align={msg.role === 'user' ? 'end' : 'start'}>
                           <MessageContent>
                             <Bubble variant="default">
-                              <BubbleContent>{msg.text}</BubbleContent>
+                              <BubbleContent className="font-medium">
+                                {msg.text}
+                              </BubbleContent>
                             </Bubble>
                           </MessageContent>
                         </Message>
@@ -145,7 +145,7 @@ export default function ChatBot() {
                         <MessageContent className="p-2">
                           <Bubble variant="outline">
                             <BubbleContent>
-                              <TextShimmer duration={1}>
+                              <TextShimmer className="font-bold" duration={1}>
                                 SoleMate is Thinking...
                               </TextShimmer>
                             </BubbleContent>
