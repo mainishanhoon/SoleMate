@@ -26,10 +26,6 @@ services:
       - key: GEMINI_API_KEY
         value: "AIzaSyAzZcDAPrK_F6hZzpYxkK5ONjpvmeba-nU"
 
-    buildFilters:
-      paths:
-        - backend/**
-
   # REACT FRONTEND
   - type: web
     name: solemate-frontend
@@ -48,6 +44,3 @@ services:
           type: web
           name: solemate-backend
           property: host
-    buildFilters:
-      paths:
-        - frontend/**
