@@ -1,4 +1,5 @@
 import type { ActionFunctionArgs } from 'react-router';
+import { BASE_URL } from '@/lib/baseUrl';
 
 export interface AIResponse {
   response: string;
@@ -19,7 +20,7 @@ export async function action({ request }: ActionFunctionArgs) {
   }
 
   try {
-    const response = await fetch(`${process.env.VITE_BACKEND_URL}/api/chat`, {
+    const response = await fetch(`${BASE_URL}/api/chat`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -37,7 +38,6 @@ export async function action({ request }: ActionFunctionArgs) {
     const data: AIResponse = await response.json();
 
     return Response.json({ response: data.response });
-
   } catch (err) {
     return Response.json(
       { error: { message: 'Failed to connect to server' } },

@@ -13,13 +13,12 @@ import { toast } from 'sonner';
 import { Button } from '@/components/ui/button';
 import { CartCheck, EyeScan } from '@solar-icons/react-perf/BoldDuotone';
 import type { Product } from '@/types/product';
+import { BASE_URL } from '@/lib/baseUrl';
 
 export async function loader({ params }: LoaderFunctionArgs) {
   const { id } = params;
 
-  const response = await fetch(
-    `${process.env.VITE_BACKEND_URL}/api/product/${id}`,
-  );
+  const response = await fetch(`${BASE_URL}/api/product/${id}`);
 
   if (!response.ok) {
     throw new Response('Product not found', { status: 404 });
@@ -27,7 +26,7 @@ export async function loader({ params }: LoaderFunctionArgs) {
 
   const product: Product = await response.json();
 
-  const imageSrc = `${process.env.VITE_BACKEND_URL}/api/product/${product.id}/image`;
+  const imageSrc = `${BASE_URL}/api/product/${product.id}/image`;
 
   return Response.json({ product, imageSrc });
 }
@@ -104,7 +103,6 @@ export default function ProductDetail() {
                 error: 'Failed to add item. Please try again.',
               });
             }}
-
             corner={true}
             variant="secondary"
           >
