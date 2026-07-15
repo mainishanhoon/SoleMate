@@ -18,7 +18,7 @@ export async function loader({ params }: LoaderFunctionArgs) {
   const { id } = params;
 
   const response = await fetch(
-    `${process.env.VITE_BASE_URL}/api/product/${id}`,
+    `${process.env.VITE_BACKEND_URL}/api/product/${id}`,
   );
 
   if (!response.ok) {
@@ -27,7 +27,7 @@ export async function loader({ params }: LoaderFunctionArgs) {
 
   const product: Product = await response.json();
 
-  const imageSrc = `${process.env.VITE_BASE_URL}/api/product/${product.id}/image`;
+  const imageSrc = `${process.env.VITE_BACKEND_URL}/api/product/${product.id}/image`;
 
   return Response.json({ product, imageSrc });
 }

@@ -14,7 +14,7 @@ export async function loader({ request }: LoaderFunctionArgs) {
 
   try {
     const response = await fetch(
-      `${process.env.VITE_BASE_URL}/api/product/search?keyword=${encodeURIComponent(keyword)}`,
+      `${process.env.VITE_BACKEND_URL}/api/product/search?keyword=${encodeURIComponent(keyword)}`,
     );
 
     if (!response.ok) {

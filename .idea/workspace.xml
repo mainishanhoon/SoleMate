@@ -4,48 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="39b3821d-dfbc-40b6-8d59-5c43f43cbe35" name="Changes" comment="feature: add to Cart">
-      <change afterPath="$PROJECT_DIR$/.idea/ShadcnHelperSettings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/prettier.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/project/solemate/controller/ChatController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/project/solemate/service/ChatService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/app/components/TextShimmer.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/app/components/cart.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/app/components/chatBot.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/app/components/itemCard.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/app/components/ui/bubble.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/app/components/ui/drawer.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/app/components/ui/empty.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/app/components/ui/marker.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/app/components/ui/message-scroller.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/app/components/ui/message.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/app/components/ui/sonner.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/app/components/ui/tooltip.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/app/providers/CartProvider.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/app/routes/products/chat.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/app/types/cart.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/app/types/message.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/public/Crocs.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/.env.example" beforeDir="false" afterPath="$PROJECT_DIR$/backend/.env.example" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/project/solemate/SoleMateApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/project/solemate/SoleMateApplication.java" afterDir="false" />
+    <list default="true" id="39b3821d-dfbc-40b6-8d59-5c43f43cbe35" name="Changes" comment="fix: Dockerfile">
+      <change afterPath="$PROJECT_DIR$/render.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/project/solemate/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/project/solemate/controller/ProductController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/.env" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/app/components/navigationBar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/app/components/navigationBar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/app/components/themeToggle.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/app/components/themeToggle.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/app/components/ui/dropdown-menu.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/app/components/ui/dropdown-menu.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/app/routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/app/routes.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/app/routes/_index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/app/routes/_index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/app/components/productDropdown.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/app/components/productDropdown.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/app/routes/products/$id.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/app/routes/products/$id.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/app/routes/products/_index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/app/routes/products/_index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/app/routes/products/_layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/app/routes/products/_layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/app/routes/products/add.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/app/routes/products/add.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/app/routes/products/chat.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/app/routes/products/chat.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/app/routes/products/search.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/app/routes/products/search.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/bun.lock" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/bun.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/vite.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/vite.config.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -207,7 +178,7 @@
       <workItem from="1782970113119" duration="10506000" />
       <workItem from="1783069547925" duration="18023000" />
       <workItem from="1783976591750" duration="23958000" />
-      <workItem from="1784034068850" duration="26741000" />
+      <workItem from="1784034068850" duration="32984000" />
     </task>
     <task id="LOCAL-00001" summary="Added tanstack for server side rendering">
       <option name="closed" value="true" />
@@ -433,7 +404,23 @@
       <option name="project" value="LOCAL" />
       <updated>1783099911143</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="feature: add to Cart">
+      <option name="closed" value="true" />
+      <created>1784072230799</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1784072230799</updated>
+    </task>
+    <task id="LOCAL-00030" summary="fix: Dockerfile">
+      <option name="closed" value="true" />
+      <created>1784072843798</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1784072843798</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -454,7 +441,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added tanstack for server side rendering" />
     <MESSAGE value="update: UI/UX" />
     <MESSAGE value="fix: NavBar, Controller, Service" />
     <MESSAGE value="update: H2-DataBase -&gt; PostgreSQL" />
@@ -479,6 +465,7 @@
     <MESSAGE value="fix: add BASE_URL" />
     <MESSAGE value="fix: add vercelPreset()" />
     <MESSAGE value="feature: add to Cart" />
-    <option name="LAST_COMMIT_MESSAGE" value="feature: add to Cart" />
+    <MESSAGE value="fix: Dockerfile" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: Dockerfile" />
   </component>
 </project>

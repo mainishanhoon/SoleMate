@@ -19,7 +19,7 @@ export async function action({ request }: ActionFunctionArgs) {
   }
 
   try {
-    const response = await fetch(`${process.env.VITE_BASE_URL}/api/chat`, {
+    const response = await fetch(`${process.env.VITE_BACKEND_URL}/api/chat`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

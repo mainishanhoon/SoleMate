@@ -3,6 +3,7 @@ import SearchInput from '@/components/searchInput';
 import { FaceScanSquare } from '@solar-icons/react-perf/BoldDuotone';
 import { ThemeToggle } from '@/components/themeToggle';
 import CartDrawer from '@/components/cart';
+import { Button } from '@/components/ui/button';
 
 export default function NavBar() {
   const route = useLocation();
@@ -27,14 +28,18 @@ export default function NavBar() {
               to={{ pathname: '/products' }}
               className="hover:text-muted-foreground text-sm font-medium transition-colors"
             >
-              Products
+              <Button variant="secondary" corner={true}>
+                Products
+              </Button>
             </Link>
           ) : (
             <Link
               to="/products/add"
               className="hover:text-muted-foreground text-sm font-medium transition-colors"
             >
-              Add Product
+              <Button variant="secondary" corner={true}>
+                Add Product
+              </Button>
             </Link>
           )}
 

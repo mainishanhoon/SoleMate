@@ -19,7 +19,7 @@ import { useCart } from '@/providers/CartProvider';
 export async function loader({
   request: _request,
 }: Route.LoaderArgs): Promise<{ data: Product[] }> {
-  const response = await fetch(`${process.env.VITE_BASE_URL}/api/product`);
+  const response = await fetch(`${process.env.VITE_BACKEND_URL}/api/product`);
   if (!response.ok) throw new Error('Failed to fetch');
 
   const products: Product[] = await response.json();
@@ -43,7 +43,7 @@ export default function ProductIndex() {
           >
             <img
               alt={'shoe'}
-              src={`${import.meta.env.VITE_BASE_URL}/api/product/${product.id}/image`}
+              src={`${import.meta.env.VITE_BACKEND_URL}/api/product/${product.id}/image`}
               onError={(e) => {
                 e.currentTarget.src =
                   'https://images.unsplash.com/photo-1542291026-7eec264c27ff';

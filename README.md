@@ -15,19 +15,20 @@ Spring Boot backend service for the SoleMate application. This API handles produ
 
 All endpoints are prefixed with `/api/product`.
 
-| Method | Endpoint | Description |
-| :--- | :--- | :--- |
-| `GET` | `/api/product` | Fetch all available products. |
-| `GET` | `/api/product/{id}` | Get specific product details by ID. |
-| `GET` | `/api/product/{id}/image` | Retrieve binary image data for a product. |
-| `GET` | `/api/product/search?keyword={key}` | Search products by keyword. |
-| `POST` | `/api/product/add` | Add a new product (Multipart/Form-Data). |
-| `PUT` | `/api/product/{id}` | Update an existing product and image. |
-| `DELETE` | `/api/product/{id}` | Delete a product by its ID. |
+| Method | Endpoint                            | Description                               |
+| :--- |:------------------------------------|:------------------------------------------|
+| `GET` | `/api/product`                      | Fetch all available products.             |
+| `GET` | `/api/product/{id}`                 | Get specific product details by ID.       |
+| `GET` | `/api/product/{id}/image`           | Retrieve binary image data for a product. |
+| `GET` | `/api/product/search?keyword={key}` | Search products by keyword.               |
+| `POST` | `/api/product/add`                 | Add a new product (Multipart/Form-Data).  |
+| `POST` | `/api/chat`                        | Triggers SoleMate AI Assistant.           |
+| `PUT` | `/api/product/{id}`                 | Update an existing product and image.     |
+| `DELETE` | `/api/product/{id}`              | Delete a product by its ID.               |
 
 ## 🛠️ Tech Stack
-*   **Language:** React & Java 21
-*   **Framework:** Spring Boot 4.0.6 & React Router
+*   **Language:** TypeScript & Java 21
+*   **Framework:** Spring Boot 4.0.6, Spring AI & React Router
 *   **Database:** PostgreSQL
 *   **Form Handling:** CONFORM.
 
@@ -44,7 +45,7 @@ For `POST /add` and `PUT /{id}`, the API requires a `multipart/form-data` reques
 
 # 🚪 SoleMate - Frontend
 
-The frontend interface for the SoleMate marketplace, built with modern web technologies to provide a seamless user experience for discovering footwear.
+The frontend interface for the SoleMate, built with modern web technologies to provide a seamless user experience for discovering footwear. It utilizes Local Storage for adding items into cart.
 
 ## 📁 Project Structure
 

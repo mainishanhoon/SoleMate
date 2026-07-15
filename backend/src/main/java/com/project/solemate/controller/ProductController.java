@@ -19,7 +19,7 @@ public class ProductController {
 
     @Autowired
     private ProductService service;
-    
+
     @GetMapping("/{id}")
     public ResponseEntity<Product> getProductById(@PathVariable("id") int id) {
         Product product = service.fetchProductsById(id);
