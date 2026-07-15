@@ -1,6 +1,6 @@
-# SPRING BOOT BACKEND
-
 services:
+  # SPRING BOOT BACKEND
+
   - type: web
     name: solemate-backend
     runtime: docker
@@ -17,16 +17,23 @@ services:
           property: host
 
       - key: DATABASE_URL
-        value: "jdbc:postgresql://ep-autumn-meadow-a59kt4rh-pooler.us-east-2.aws.neon.tech/neondb?sslmode=require"
+        sync: false
+
       - key: DB_USERNAME
-        value: "neondb_owner"
+        sync: false
+
       - key: DB_PASSWORD
-        value: "Bz5TYJlKOwj1"
+        sync: false
 
       - key: GEMINI_API_KEY
-        value: "AIzaSyAzZcDAPrK_F6hZzpYxkK5ONjpvmeba-nU"
+        sync: false
+
+    buildFilter:
+      paths:
+        - backend/**
 
   # REACT FRONTEND
+
   - type: web
     name: solemate-frontend
     runtime: node
@@ -39,8 +46,13 @@ services:
         value: "20"
       - key: BUN_VERSION
         value: "1.1.0"
+
       - key: VITE_BACKEND_URL
         fromService:
           type: web
           name: solemate-backend
           property: host
+
+    buildFilter:
+      paths:
+        - frontend/**

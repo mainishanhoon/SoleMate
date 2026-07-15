@@ -4,19 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="39b3821d-dfbc-40b6-8d59-5c43f43cbe35" name="Changes" comment="fix: Dockerfile">
-      <change afterPath="$PROJECT_DIR$/render.yaml" afterDir="false" />
+    <list default="true" id="39b3821d-dfbc-40b6-8d59-5c43f43cbe35" name="Changes" comment="fix: remove buildFilters">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/project/solemate/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/project/solemate/controller/ProductController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/.env" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/app/components/navigationBar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/app/components/navigationBar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/app/components/productDropdown.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/app/components/productDropdown.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/app/routes/products/$id.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/app/routes/products/$id.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/app/routes/products/_index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/app/routes/products/_index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/app/routes/products/add.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/app/routes/products/add.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/app/routes/products/chat.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/app/routes/products/chat.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/app/routes/products/search.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/app/routes/products/search.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -178,7 +167,7 @@
       <workItem from="1782970113119" duration="10506000" />
       <workItem from="1783069547925" duration="18023000" />
       <workItem from="1783976591750" duration="23958000" />
-      <workItem from="1784034068850" duration="32984000" />
+      <workItem from="1784034068850" duration="33885000" />
     </task>
     <task id="LOCAL-00001" summary="Added tanstack for server side rendering">
       <option name="closed" value="true" />
@@ -420,7 +409,23 @@
       <option name="project" value="LOCAL" />
       <updated>1784072843798</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="add: render.yaml">
+      <option name="closed" value="true" />
+      <created>1784117522637</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1784117522637</updated>
+    </task>
+    <task id="LOCAL-00032" summary="fix: remove buildFilters">
+      <option name="closed" value="true" />
+      <created>1784118010434</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1784118010434</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -441,8 +446,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="update: UI/UX" />
-    <MESSAGE value="fix: NavBar, Controller, Service" />
     <MESSAGE value="update: H2-DataBase -&gt; PostgreSQL" />
     <MESSAGE value="feature: add search functionality for products" />
     <MESSAGE value="update: add chip and redirection" />
@@ -466,6 +469,8 @@
     <MESSAGE value="fix: add vercelPreset()" />
     <MESSAGE value="feature: add to Cart" />
     <MESSAGE value="fix: Dockerfile" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: Dockerfile" />
+    <MESSAGE value="add: render.yaml" />
+    <MESSAGE value="fix: remove buildFilters" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: remove buildFilters" />
   </component>
 </project>
