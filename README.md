@@ -7,13 +7,14 @@
 ### Products
  <img src="https://github.com/mainishanhoon/SoleMate/blob/master/frontend/public/Products.png" alt="Products"/>
 
+### AI Assistant
+ <img src="https://github.com/mainishanhoon/SoleMate/blob/master/frontend/public/AI%20Assistant.webp" alt="AI Assistant"/>
+
 # 🈸 SoleMate - Backend
 
 Spring Boot backend service for the SoleMate application. This API handles product management, multi-brand cataloging, and image handling.
 
 ## 📜 API Documentation
-
-All endpoints are prefixed with `/api/product`.
 
 | Method | Endpoint                            | Description                               |
 | :--- |:------------------------------------|:------------------------------------------|
